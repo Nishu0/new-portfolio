@@ -1,3 +1,5 @@
+import { CatSprite } from "@/components/cat-sprite";
+
 export function Hero() {
   return (
     <section style={{ marginBottom: 64 }}>
@@ -7,12 +9,16 @@ export function Hero() {
           fontWeight: 600,
           marginBottom: 8,
           letterSpacing: "-0.02em",
+          display: "flex",
+          alignItems: "flex-end",
+          gap: 0,
         }}
       >
         i&apos;m nisarg!
+        <CatSprite />
       </h1>
       <p style={{ color: "#666", fontSize: 16 }}>
-        (call nishu) · engineer
+        (aka nishu) · engineer
       </p>
       <p
         style={{
