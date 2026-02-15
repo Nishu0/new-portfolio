@@ -4,7 +4,7 @@ export const experience = [
     role: "FOUNDING MOVE DEVELOPER",
     period: "FEB 2024 - DEC 2025",
     description:
-      "built core smart contracts and backend infrastructure for an onchain credit protocol. designed lending pools, credit scoring mechanisms, and real world asset tokenization pipelines.",
+      "built initial version of the underwriting system for analyzing and generating zk proofs for borrower information. worked on core smart contracts and backend infrastructure for an onchain credit protocol.",
     tags: ["rust", "move", "fastify", "nextjs", "go"],
   },
 ];
@@ -15,7 +15,7 @@ export const posts = [
     tag: "PROJECT",
     year: "2026",
     description:
-      "a platform for discovering and sharing books with a community of readers.",
+      "ai agents spawn in cities, get roles, communicate, earn, move around and evolve the world. register your bot, drop it in a country, and watch it play out. onchain trading included.",
     tags: ["typescript", "nextjs", "fastify"],
     xLink: "https://x.com/itsnishu/status/2018031205703377303",
     link: "https://www.moltbookworld.xyz/",
@@ -25,7 +25,7 @@ export const posts = [
     tag: "PROJECT",
     year: "2026",
     description:
-      "turn your x threads into clean, readable long form articles instantly.",
+      "thought why not, so i built it. turns x threads into clean articles with reading progress tracking, auto scroll resume, and daily notifications for fav authors. all data stays in your browser.",
     tags: ["typescript", "nextjs", "fastify"],
     xLink: "https://x.com/itsnishu/status/2016858382008012931",
     link: "https://www.xarticles.one/",
@@ -35,7 +35,7 @@ export const posts = [
     tag: "PROJECT",
     year: "2026",
     description:
-      "match with co founders based on complementary skills and shared vision.",
+      "quick scoring tool for founders based on their x profile, project stage, grants, tweet quality, key follows, and investor connections. helps you decide before taking the bet on a startup.",
     tags: ["typescript", "nextjs", "fastify"],
     xLink: "https://x.com/itsnishu/status/2013890499011338545",
     link: "https://findfounder.one/",
@@ -45,7 +45,7 @@ export const posts = [
     tag: "ARTICLE",
     year: "2025",
     description:
-      "reflections on navigating uncertainty and finding something worth building when everything feels noisy.",
+      "these are raw thoughts just observations take it as a pinch of salt just enough to balance your food, not too low, not too high.",
     xLink: "https://x.com/itsnishu/status/2003466290904576312",
   },
   {
@@ -53,7 +53,7 @@ export const posts = [
     tag: "ARTICLE",
     year: "2025",
     description:
-      "why execution beats ideation, a breakdown of how to validate before you build.",
+      "just got back from aptos winter school last week met a bunch of hackers college kids at their first event, some web3 newbies, some seasoned web3 builders.",
     xLink: "https://x.com/itsnishu/status/1991129810350039361",
   },
   {
@@ -61,7 +61,7 @@ export const posts = [
     tag: "ARTICLE",
     year: "2025",
     description:
-      "context is everything. why most ai generated code falls apart and how to fix it.",
+      "everyone's obsessed with crafting the perfect system prompt but your agent is missing some context.",
     xLink: "https://x.com/itsnishu/status/1978062626014814230",
   },
 ];
