@@ -9,8 +9,23 @@ const articulat = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Nisarg",
-  description: "Nisarg's portfolio",
+  title: "nisarg thakkar's diary",
+  description: "Nisarg Thakkar is a Web3 Developer based out of India.",
+  icons: {
+    icon: "/favicon.png",
+    apple: "/favicon.png",
+  },
+  openGraph: {
+    title: "nisarg thakkar's diary",
+    description: "Nisarg Thakkar is a Web3 Developer based out of India.",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "nisarg thakkar's diary",
+    description: "Nisarg Thakkar is a Web3 Developer based out of India.",
+    creator: "@itsnishu",
+  },
 };
 
 export default function RootLayout({

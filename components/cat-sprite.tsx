@@ -18,8 +18,8 @@ export function CatSprite() {
 
     // Pass current position to oneko.js
     const rect = e.currentTarget.getBoundingClientRect();
-    (window as Record<string, unknown>).__onekoStartX = rect.left + 16;
-    (window as Record<string, unknown>).__onekoStartY = rect.top + 16;
+    (window as unknown as Record<string, unknown>).__onekoStartX = rect.left + 16;
+    (window as unknown as Record<string, unknown>).__onekoStartY = rect.top + 16;
 
     setActive(true);
 
