@@ -1,5 +1,6 @@
 import { AccordionItem } from "@/components/accordion-item";
 import { Tags } from "@/components/tags";
+import { Timeline } from "@/components/timeline";
 import { experience } from "@/lib/data";
 
 export function Experience() {
@@ -38,6 +39,7 @@ export function Experience() {
           <p style={{ fontSize: 13, color: "#888", lineHeight: 1.6 }}>
             {exp.description}
           </p>
+          {exp.timeline && <Timeline items={exp.timeline} />}
           <Tags items={exp.tags} />
         </AccordionItem>
       ))}

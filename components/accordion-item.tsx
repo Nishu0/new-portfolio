@@ -59,7 +59,7 @@ export function AccordionItem({
       <div
         style={{
           overflow: "hidden",
-          maxHeight: open ? 500 : 0,
+          maxHeight: open ? 800 : 0,
           transition: "max-height 0.3s ease",
         }}
       >

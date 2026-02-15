@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { AccordionItem } from "@/components/accordion-item";
 import { Tags } from "@/components/tags";
+import { Timeline } from "@/components/timeline";
 import { XIcon, LinkIcon } from "@/components/icons";
 import { posts } from "@/lib/data";
 
@@ -68,6 +69,7 @@ export function Posts() {
           <p style={{ fontSize: 13, color: "#888", lineHeight: 1.6 }}>
             {post.description}
           </p>
+          {post.timeline && <Timeline items={post.timeline} />}
           {post.tags && <Tags items={post.tags} />}
         </AccordionItem>
       ))}
