@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import OnekoCat from "@/components/onekoCat";
 
 const articulat = localFont({
   src: "../public/font/Articulat_CF_Demi_Bold.ttf",
@@ -19,9 +20,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" className="dark" suppressHydrationWarning>
       <body className={`${articulat.variable} antialiased`}>
         {children}
+        <OnekoCat />
       </body>
     </html>
   );
