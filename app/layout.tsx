@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next"
 
 const articulat = localFont({
   src: "../public/font/Articulat_CF_Demi_Bold.ttf",
@@ -37,6 +38,7 @@ export default function RootLayout({
     <html lang="en" className="dark" suppressHydrationWarning>
       <body className={`${articulat.variable} antialiased`}>
         {children}
+        <Analytics />
       </body>
     </html>
   );
