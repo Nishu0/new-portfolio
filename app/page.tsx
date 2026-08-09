@@ -1,25 +1,29 @@
-import { Navbar } from "@/components/navbar";
+import { StatusBar } from "@/components/status-bar";
+import { Header } from "@/components/header";
 import { Hero } from "@/components/hero";
-import { Photos } from "@/components/photos";
-import { Experience } from "@/components/experience";
-import { Posts } from "@/components/posts";
+import { EntrySection } from "@/components/entry-section";
+import { Testimonials } from "@/components/testimonials";
+import { Contact } from "@/components/contact";
+import { LogoTicker } from "@/components/logo-ticker";
 import { Footer } from "@/components/footer";
+import { experience, projects } from "@/lib/data";
 
 export default function Page() {
   return (
-    <div
-      style={{
-        maxWidth: 620,
-        margin: "0 auto",
-        padding: "40px 20px 80px",
-      }}
-    >
-      <Navbar />
-      <Hero />
-      <Photos />
-      <Experience />
-      <Posts />
-      <Footer />
-    </div>
+    <>
+      <StatusBar />
+      <div className="page">
+        <Header />
+        <main>
+          <Hero />
+          <EntrySection label="Experience" entries={experience} />
+          <EntrySection label="Projects & writing" entries={projects} />
+          <Testimonials />
+          <Contact />
+          <LogoTicker />
+        </main>
+        <Footer />
+      </div>
+    </>
   );
 }

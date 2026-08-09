@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 
-export const alt = "Nisarg Thakkar is a Web3 Developer based out of India";
+export const alt = "Nisarg Thakkar — Systems & Infrastructure engineer based in Bangalore, India";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -20,7 +20,7 @@ export default async function Image() {
     (
       <div
         style={{
-          background: "#000",
+          background: "#412a80",
           width: "100%",
           height: "100%",
           display: "flex",
@@ -32,19 +32,29 @@ export default async function Image() {
       >
         <img
           src={catBase64}
+          alt=""
           width={64}
           height={64}
           style={{ marginBottom: 32 }}
         />
         <div
           style={{
-            fontSize: 48,
+            fontSize: 60,
             color: "#fff",
-            lineHeight: 1.3,
-            maxWidth: 700,
+            lineHeight: 1.2,
+            maxWidth: 860,
           }}
         >
-          Nisarg Thakkar is a Web3 Developer based out of India
+          I build the systems that make products scale
+        </div>
+        <div
+          style={{
+            fontSize: 28,
+            color: "#c5baea",
+            marginTop: 28,
+          }}
+        >
+          Nisarg Thakkar · Systems & Infrastructure · Bangalore, India
         </div>
       </div>
     ),
