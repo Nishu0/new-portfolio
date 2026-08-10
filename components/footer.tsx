@@ -15,7 +15,7 @@ export function Footer() {
       </div>
       <p className="copyright">
         Made with <span aria-hidden="true">❤️</span> &amp;{" "}
-        <span aria-hidden="true">🤖</span> in Bangalore{" "}
+        <span aria-hidden="true">☕</span> in Bangalore{" "}
         <span aria-hidden="true">🇮🇳</span> · <LocalTime />
         <CatSprite />
       </p>

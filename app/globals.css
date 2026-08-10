@@ -74,13 +74,14 @@ a {
   text-decoration: none;
 }
 
+
 ::selection {
   background: var(--color-outline);
   color: var(--color-accent-ink);
 }
 
 /* ---------------------------------------------------------------------------
-   Page chrome — the dashed rails that frame the whole site
+   Page chrome: the dashed rails that frame the whole site
 --------------------------------------------------------------------------- */
 .page {
   max-width: var(--page-max);
@@ -153,10 +154,18 @@ a {
   justify-content: space-between;
   gap: 16px;
   padding: 14px var(--page-pad);
-  background: color-mix(in srgb, var(--color-bg) 82%, transparent);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border-bottom: 1px dashed var(--color-rail);
+  background: transparent;
+  border-bottom: 1px dashed transparent;
+  transition: background 0.25s ease, border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+/* Once the page moves, the bar goes fully opaque so content scrolls behind it
+   cleanly instead of showing through. */
+.headerScrolled {
+  background: var(--color-bg-deep);
+  border-bottom-color: var(--color-rail);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.22);
 }
 
 .headerIdentity {

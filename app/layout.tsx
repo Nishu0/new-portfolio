@@ -18,7 +18,7 @@ const nunitoSans = Nunito_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Nisarg Thakkar — Systems & Infrastructure",
+  title: "Nisarg Thakkar | Systems & Infrastructure",
   description:
     "I build the systems that make products scale: backend infrastructure, distributed systems, and the interfaces on top. Based in Bangalore, open to full-time roles and contract engagements.",
   icons: {
@@ -26,14 +26,14 @@ export const metadata: Metadata = {
     apple: "/favicon.png",
   },
   openGraph: {
-    title: "Nisarg Thakkar — Systems & Infrastructure",
+    title: "Nisarg Thakkar | Systems & Infrastructure",
     description:
       "I build the systems that make products scale. Based in Bangalore, open to full-time roles and contract engagements.",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Nisarg Thakkar — Systems & Infrastructure",
+    title: "Nisarg Thakkar | Systems & Infrastructure",
     description:
       "I build the systems that make products scale. Based in Bangalore, open to full-time roles and contract engagements.",
     creator: "@itsnishu",

@@ -5,7 +5,7 @@ export const profile = {
   status: "Open to new contract and full time work",
   headline: "I build the systems that make products scale",
   subhead:
-    "Backend infrastructure, distributed systems, and the interfaces on top. I ship end-to-end — data pipelines, APIs, proof systems, and the dashboards people actually use. Open to full-time roles and contract engagements.",
+    "Backend infrastructure, distributed systems, and the interfaces on top. I ship end to end: data pipelines, APIs, proof systems, and the dashboards people actually use. Open to full-time roles and contract engagements.",
   location: "Based in Bangalore, working with teams anywhere",
   contactIntro:
     "Interested in working together, or just want to chat? I'm open to full-time engineering roles and contract engagements.",
@@ -79,7 +79,7 @@ export const projects: Entry[] = [
     bullets: [
       "Your coding agents, in your pocket. Monitor, browse, and continue the AI coding sessions running on your Mac from anywhere, privately over Tailscale.",
       "The iOS app joins a private tailnet through an embedded tsnet module, registering with the key from a QR scan; the tunnel terminates at 127.0.0.1, which also sidesteps iOS ATS.",
-      "Self-hosted Headscale control plane running database policy mode with per-account ACL isolation — the phone and the Mac's sakura-tsnet sidecar both register there and meet over the WireGuard mesh.",
+      "Self-hosted Headscale control plane running database policy mode with per-account ACL isolation. The phone and the Mac's sakura-tsnet sidecar both register there and meet over the WireGuard mesh.",
       "Rust API server handles auth, GitHub, Convex session reads, and the CLI device flow, and auto-provisions each account's tailnet key when the daemon starts.",
       "Node daemon reads ~/.claude, ~/.codex, and ~/.local/share/opencode, and drives the claude, codex, and opencode CLIs locally.",
       "Caddy fronts both services with auto-HTTPS; the Next.js web app on Vercel handles CLI login and invites.",
@@ -94,10 +94,10 @@ export const projects: Entry[] = [
     period: "May 2026",
     badge: "Project",
     bullets: [
-      "A local-first iMessage agent that lives inside your self-thread. You text yourself; Kodama answers — like shouting into a forest and hearing the mountain reply. Your data sits on your Mac.",
+      "A local-first iMessage agent that lives inside your self-thread. You text yourself; Kodama answers, like shouting into a forest and hearing the mountain reply. Your data sits on your Mac.",
       "A parent orchestrator routes each message to exactly one specialized sub-agent with a whitelisted tool set. No sub-agent can dispatch, so the tree is exactly one level deep and there is no fan-out.",
       "Memory is bucketed by decay speed across seven semantic segments; effective importance decays exponentially from last access, and the nightly pass prunes anything under 0.08. Accessing a memory resets the clock and can promote its bucket.",
-      "A 03:00 launchd job runs a three-stage adversarial pass over the store: a consolidator proposes keep/promote/merge/prune, an adversary challenges each proposal, and a judge rules on the contested ones — biased toward preserving identity and relationship segments.",
+      "A 03:00 launchd job runs a three-stage adversarial pass over the store: a consolidator proposes keep/promote/merge/prune, an adversary challenges each proposal, and a judge rules on the contested ones, biased toward preserving identity and relationship segments.",
       "Every action writes an immutable event and a record snapshot, so the whole history is reversible.",
       "Captures journal entries, schedules reminders, watches X handles with free-form filters on a 5-hour digest, serves weather from Open-Meteo, and reads Gmail behind a redaction policy that strips OTPs and financial numbers before the LLM ever sees them.",
       "Each run is bounded by a per-sub-agent USD spend cap and turn cap. When “ok, logged” is the whole response, it sends a tapback instead of typing.",
@@ -130,7 +130,7 @@ export const projects: Entry[] = [
     period: "2025",
     badge: "Article",
     bullets: [
-      "These are raw thoughts, just observations. Take it as a pinch of salt — just enough to balance your food, not too low, not too high.",
+      "These are raw thoughts, just observations. Take it as a pinch of salt, just enough to balance your food, not too low, not too high.",
     ],
     links: [
       { label: "Read on X", href: "https://x.com/itsnishu/status/2003466290904576312" },
@@ -186,7 +186,7 @@ export type Logo = {
   /** Intrinsic pixel size of the file, so the aspect ratio is preserved. */
   width?: number;
   height?: number;
-  /** Rendered height in px — tune per logo so they read at the same weight. */
+  /** Rendered height in px. Tune per logo so they read at the same weight. */
   display?: number;
 };
 

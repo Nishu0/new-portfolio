@@ -11,7 +11,7 @@ export function CopyEmailButton({ email }: { email: string }) {
       setCopied(true);
       setTimeout(() => setCopied(false), 1800);
     } catch {
-      // Clipboard blocked (insecure context / denied permission) — no-op.
+      // Clipboard blocked (insecure context / denied permission), no-op.
     }
   };
 

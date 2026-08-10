@@ -20,7 +20,7 @@ export function Reveal({
 
     // Reveal once the top edge has entered the viewport. Comparing against the
     // rect (rather than relying on IntersectionObserver alone) also covers
-    // elements the user has already scrolled past — a fast scroll can jump an
+    // elements the user has already scrolled past. A fast scroll can jump an
     // element from below the fold to above it without ever crossing a
     // threshold, which would otherwise leave it invisible forever.
     const check = () => {
