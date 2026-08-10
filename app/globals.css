@@ -994,3 +994,25 @@ a {
     text-align: center;
   }
 }
+
+/* ---------------------------------------------------------------------------
+   Cursor
+--------------------------------------------------------------------------- */
+/* Glowing arrow cursor. Only on devices with a real pointer, so touch and
+   coarse-pointer devices are left alone. */
+@media (hover: hover) and (pointer: fine) {
+  body {
+    cursor: url("/cursor.svg") 9 8, auto;
+  }
+
+  a,
+  button,
+  [role="button"],
+  .btn,
+  .row,
+  .dot,
+  .navButton,
+  .copyButton {
+    cursor: url("/cursor-pointer.svg") 9 8, pointer;
+  }
+}
