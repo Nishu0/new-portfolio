@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import { profile } from "@/lib/data";
 
@@ -16,7 +17,7 @@ export function Header() {
 
   return (
     <header className={`header ${scrolled ? "headerScrolled" : ""}`}>
-      <div className="headerIdentity">
+      <Link className="headerIdentity" href="/">
         <Image
           className="headerAvatar"
           src={profile.avatar}
@@ -28,10 +29,15 @@ export function Header() {
           <div className="headerName">{profile.name}</div>
           <div className="headerTitle">{profile.title}</div>
         </div>
-      </div>
-      <a className="btn" href="#contact">
-        Get in touch
-      </a>
+      </Link>
+      <nav className="headerNav">
+        <Link className="headerLink" href="/writing">
+          Writing
+        </Link>
+        <Link className="btn" href="/#contact">
+          Get in touch
+        </Link>
+      </nav>
     </header>
   );
 }

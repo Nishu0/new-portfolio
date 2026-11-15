@@ -16,8 +16,8 @@ export default function Page() {
         <Header />
         <main>
           <Hero />
-          <EntrySection label="Experience" entries={experience} />
-          <EntrySection label="Projects & writing" entries={projects} />
+          <EntrySection label="Experience" entries={experience} timeline />
+          <EntrySection label="Projects" entries={projects} />
           <Testimonials />
           <Contact />
           <LogoTicker />

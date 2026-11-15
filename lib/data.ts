@@ -12,7 +12,9 @@ export const profile = {
   // Leave empty to hide the copy-email button in the contact section.
   email: "itsnisargthakkar@gmail.com",
   links: {
-    x: "https://x.com/itsnishu",
+    x: "https://x.com/itsnishutwt",
+    linkedin: "https://www.linkedin.com/in/Nishu0",
+    instagram: "https://www.instagram.com/itznishuu_/",
     github: "https://github.com/Nishu0",
     resume: "/Nisarg_Thakkar_Resume.pdf",
   },
@@ -120,46 +122,7 @@ export const projects: Entry[] = [
     tags: ["typescript", "nextjs", "fastify"],
     links: [
       { label: "Live site", href: "https://findfounder.one/" },
-      { label: "Thread", href: "https://x.com/itsnishu/status/2013890499011338545" },
-    ],
-  },
-  {
-    role: "amidst all the chaos, finding dust to build upon",
-    org: "Published on X",
-    monogram: "A",
-    period: "2025",
-    badge: "Article",
-    bullets: [
-      "These are raw thoughts, just observations. Take it as a pinch of salt, just enough to balance your food, not too low, not too high.",
-    ],
-    links: [
-      { label: "Read on X", href: "https://x.com/itsnishu/status/2003466290904576312" },
-    ],
-  },
-  {
-    role: "ideas are cheap: do market study, validate demand, ship, find pmf",
-    org: "Published on X",
-    monogram: "A",
-    period: "2025",
-    badge: "Article",
-    bullets: [
-      "Just got back from Aptos Winter School. Met a bunch of hackers, college kids at their first event, some web3 newbies, some seasoned web3 builders.",
-    ],
-    links: [
-      { label: "Read on X", href: "https://x.com/itsnishu/status/1991129810350039361" },
-    ],
-  },
-  {
-    role: "your v̶i̶b̶e̶ shit coding sucks bcs you are missing some context",
-    org: "Published on X",
-    monogram: "A",
-    period: "2025",
-    badge: "Article",
-    bullets: [
-      "Everyone's obsessed with crafting the perfect system prompt, but your agent is missing some context.",
-    ],
-    links: [
-      { label: "Read on X", href: "https://x.com/itsnishu/status/1978062626014814230" },
+      { label: "Thread", href: "https://x.com/itsnishutwt/status/2013890499011338545" },
     ],
   },
 ];

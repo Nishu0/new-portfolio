@@ -103,10 +103,12 @@ export function EntryRow({ entry }: { entry: Entry }) {
                       className="rowLink"
                       key={link.href}
                       href={link.href}
-                      target="_blank"
-                      rel="noreferrer"
+                      // Links into the site stay in this tab.
+                      {...(link.href.startsWith("/")
+                        ? {}
+                        : { target: "_blank", rel: "noreferrer" })}
                     >
-                      {link.label} ↗
+                      {link.label} {link.href.startsWith("/") ? "→" : "↗"}
                     </a>
                   ))}
                 </div>

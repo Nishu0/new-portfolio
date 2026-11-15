@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     title: "Nisarg Thakkar | Systems & Infrastructure",
     description:
       "I build the systems that make products scale. Based in Bangalore, open to full-time roles and contract engagements.",
-    creator: "@itsnishu",
+    creator: "@itsnishutwt",
   },
 };
 

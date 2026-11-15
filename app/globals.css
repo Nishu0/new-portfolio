@@ -264,31 +264,56 @@ a {
   line-height: 1.6;
   color: var(--color-text-muted);
   max-width: 56ch;
-  margin: 0 0 38px;
+  margin: 0 0 30px;
 }
 
-.heroCtaRow {
+/* One row of links; on narrow screens it scrolls sideways rather than
+   wrapping onto a second line. */
+.heroLinks {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 18px 26px;
-  margin-bottom: 64px;
+  flex-wrap: nowrap;
+  gap: 10px;
+  /* The sideways scroll also clips vertically, so leave room for the
+     hover lift and the dashed border. */
+  padding: 4px 2px;
+  margin: -4px -2px 56px;
+  overflow-x: auto;
+  scrollbar-width: none;
 }
 
-.heroMeta {
+.heroLinks::-webkit-scrollbar {
+  display: none;
+}
+
+/* Small dashed pills, in the same language as the page rails. */
+.heroLink {
+  flex-shrink: 0;
+  white-space: nowrap;
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  font-size: 0.96rem;
+  padding: 7px 14px;
+  border-radius: 999px;
+  border: 1px dashed var(--color-rail);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.86rem;
   color: var(--color-text-muted);
-  margin: 0;
+  transition: color 0.18s ease, background 0.18s ease, border-color 0.18s ease,
+    transform 0.18s ease;
 }
 
-.heroMetaIcon {
-  width: 17px;
-  height: 17px;
+.heroLink svg {
   flex-shrink: 0;
   opacity: 0.85;
+}
+
+.heroLink:hover {
+  color: var(--color-text);
+  background: var(--color-surface);
+  border-color: var(--color-text-dim);
+  transform: translateY(-1px);
 }
 
 /* ---------------------------------------------------------------------------
@@ -383,6 +408,27 @@ a {
 
 .row:last-child {
   border-bottom: none;
+}
+
+/* Timeline: a dashed line drops from each logo to the next, replacing the
+   rules between rows. 26px is the row padding and half the 52px logo. */
+.timeline .row {
+  position: relative;
+  border-bottom: none;
+}
+
+.timeline .row::before {
+  content: "";
+  position: absolute;
+  left: 26px;
+  top: calc(26px + 52px + 8px);
+  bottom: -18px;
+  border-left: 1px dashed var(--color-rail);
+  pointer-events: none;
+}
+
+.timeline > :last-child .row::before {
+  bottom: 0;
 }
 
 .rowLeft {
@@ -1014,5 +1060,1118 @@ a {
   .navButton,
   .copyButton {
     cursor: url("/cursor-pointer.svg") 9 8, pointer;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Header nav
+--------------------------------------------------------------------------- */
+.headerNav {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.headerLink {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: var(--color-text-muted);
+  border-bottom: 1px dashed transparent;
+  padding-bottom: 2px;
+  transition: color 0.18s ease, border-color 0.18s ease;
+}
+
+.headerLink:hover {
+  color: var(--color-text);
+  border-color: var(--color-rail);
+}
+
+/* ---------------------------------------------------------------------------
+   Writing: the shelf
+--------------------------------------------------------------------------- */
+.writing {
+  min-height: 70vh;
+}
+
+.shelfYear + .shelfYear {
+  margin-top: 72px;
+}
+
+/* Year label with a dashed rail running off to the right, like the page rails.
+   It is a heading for structure only, so it drops the display treatment. */
+.shelfYearLabel {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 0 0 34px;
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--color-text-muted);
+  text-shadow: none;
+}
+
+.shelfYearLabel::after {
+  content: "";
+  flex: 1;
+  border-top: 1px dashed var(--color-rail);
+}
+
+.shelf {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 52px 44px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.shelf > li {
+  min-width: 0;
+  animation: shelfEnter 0.6s cubic-bezier(0.22, 0.8, 0.25, 1) backwards;
+}
+
+@keyframes shelfEnter {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+}
+
+.bookCard {
+  display: block;
+  perspective: 1100px;
+}
+
+.bookCard:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 10px;
+  border-radius: 4px;
+}
+
+.bookCardBook {
+  display: block;
+  position: relative;
+}
+
+/* The block of pages under the cover, seen when the cover swings ajar. */
+.bookCardBook::before {
+  content: "";
+  position: absolute;
+  inset: 1.2% 0 1.2% 2%;
+  border-radius: 2px 5px 5px 2px;
+  background: repeating-linear-gradient(
+      to right,
+      #efe6cc 0,
+      #efe6cc 2px,
+      #d9cfb4 2px,
+      #d9cfb4 3px
+    );
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.34);
+}
+
+.bookCard .bookCover {
+  transform-origin: left center;
+  transition: transform 0.4s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.bookCard:hover .bookCover,
+.bookCard:focus-visible .bookCover {
+  transform: rotateY(-22deg);
+}
+
+/* While a book is out being read, its place on the shelf is empty. */
+.bookCardPicked .bookCardBook {
+  visibility: hidden;
+}
+
+.bookCardTitle {
+  display: block;
+  margin-top: 20px;
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 0.98rem;
+  line-height: 1.4;
+  color: var(--color-text);
+}
+
+.bookCard:hover .bookCardTitle {
+  text-decoration: underline dashed var(--color-rail);
+  text-underline-offset: 4px;
+}
+
+.bookCardMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 14px;
+  margin-top: 6px;
+  font-size: 0.82rem;
+  color: var(--color-text-dim);
+}
+
+/* ---------------------------------------------------------------------------
+   Writing: the book cover
+   Sized entirely in container units so it scales from thumbnail to full page.
+--------------------------------------------------------------------------- */
+.bookCover {
+  --cover-paper: #fdf7e6;
+  --cover-ink: #271650;
+  display: block;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 5 / 7;
+  container-type: inline-size;
+  color: var(--cover-ink);
+}
+
+.bookTone-ink {
+  --cover-paper: #150d2e;
+  --cover-ink: #fdf7e6;
+}
+
+.bookTone-night {
+  --cover-paper: #1f1442;
+  --cover-ink: #fdf7e6;
+}
+
+.bookTone-lilac {
+  --cover-paper: #ddd2fb;
+  --cover-ink: #271650;
+}
+
+.bookCoverFace {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 9cqw 0 7cqw;
+  background: var(--cover-paper);
+  border-radius: 2px 6px 6px 2px;
+  overflow: hidden;
+}
+
+
+.bookCoverTitle,
+.bookCoverFoot {
+  padding: 0 8cqw 0 12cqw;
+}
+
+.bookCoverTitle {
+  font-family: var(--font-heading);
+  font-weight: 900;
+  font-size: 8.4cqw;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+  overflow-wrap: break-word;
+}
+
+.bookCoverFoot {
+  display: flex;
+  justify-content: space-between;
+  gap: 3cqw;
+  margin-top: auto;
+  font-size: 3.4cqw;
+  font-weight: 600;
+  opacity: 0.72;
+}
+
+/* ---------------------------------------------------------------------------
+   Writing: the reader
+--------------------------------------------------------------------------- */
+.reader {
+  /* One page. A spread is two of these side by side. */
+  --page-w: min(600px, calc((100vw - 48px) / 2), calc((100dvh - 124px) * 5 / 7));
+  --page-h: calc(var(--page-w) * 1.4);
+  --page-pad: calc(var(--page-w) * 0.09);
+  --paper: #fdf7e6;
+  --ink: #2b1b58;
+  --turn: 0.72s;
+  --font-scale: 1;
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  /* The reader scrolls: the book fills the first screen and the article's
+     details sit below it. */
+  overflow: hidden auto;
+  overscroll-behavior: contain;
+  outline: none;
+}
+
+.readerScreen {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100dvh;
+  padding: 56px 16px 68px;
+  overflow: hidden;
+}
+
+.readerSingle {
+  --page-w: min(460px, calc(100vw - 32px), calc((100dvh - 124px) * 5 / 7));
+}
+
+.readerBackdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(29, 16, 64, 0.985);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  opacity: 0;
+  transition: opacity 0.36s ease;
+}
+
+.readerVisible .readerBackdrop {
+  opacity: 1;
+}
+
+/* The two corner buttons: reading settings and close. */
+.readerIcon {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px dashed var(--color-rail);
+  background: rgba(29, 16, 64, 0.7);
+  color: var(--color-text);
+  transition: background 0.18s ease;
+}
+
+.readerIcon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.readerIcon:hover,
+.readerIcon[aria-expanded="true"] {
+  background: var(--color-surface-strong);
+}
+
+.readerSettings,
+.readerClose {
+  position: fixed;
+  top: 14px;
+  z-index: 4;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.readerSettings {
+  left: 18px;
+}
+
+.readerClose {
+  right: 18px;
+}
+
+.readerVisible .readerSettings,
+.readerVisible .readerClose,
+.readerVisible .readerBar {
+  opacity: 1;
+}
+
+.readerPanel {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 232px;
+  padding: 16px;
+  border-radius: 14px;
+  border: 1px dashed var(--color-rail);
+  background: var(--color-bg-deep);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.4);
+  animation: panelIn 0.2s cubic-bezier(0.2, 0.65, 0.3, 1);
+}
+
+@keyframes panelIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+}
+
+.readerPanel fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.readerPanel fieldset + fieldset {
+  margin-top: 16px;
+}
+
+.readerPanel legend {
+  padding: 0;
+  margin-bottom: 8px;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+.readerModes,
+.readerFont {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.readerFont {
+  grid-template-columns: 44px 1fr 44px;
+  align-items: center;
+}
+
+.readerPanel button {
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  background: var(--color-surface-strong);
+  color: var(--color-text);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: background 0.18s ease, color 0.18s ease;
+}
+
+.readerPanel button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.readerPanel button[aria-pressed="true"] {
+  background: var(--color-accent);
+  color: var(--color-accent-ink);
+}
+
+.readerPanel button:disabled {
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+.readerFont output {
+  text-align: center;
+  font-size: 0.9rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.bookStage {
+  position: relative;
+  z-index: 1;
+}
+
+.bookSheet {
+  position: relative;
+  width: calc(var(--page-w) * 2);
+  height: var(--page-h);
+  perspective: 2600px;
+  transition: transform var(--turn) cubic-bezier(0.5, 0, 0.5, 1);
+}
+
+.bookSheetShut {
+  transform: translateX(calc(var(--page-w) * -0.5));
+}
+
+.readerSingle .bookSheet {
+  width: var(--page-w);
+}
+
+.readerSingle .bookSheetShut {
+  transform: none;
+}
+
+/* One soft shadow under whatever part of the book is on the table, so the
+   two pages never cast shadows onto each other. */
+.bookUnderlay {
+  position: absolute;
+  inset: 0;
+  border-radius: 6px;
+  box-shadow: 0 26px 60px rgba(0, 0, 0, 0.5);
+  transition: left var(--turn) cubic-bezier(0.5, 0, 0.5, 1);
+}
+
+.bookSheetShut .bookUnderlay {
+  left: var(--page-w);
+}
+
+.readerSingle .bookSheetShut .bookUnderlay {
+  left: 0;
+}
+
+.bookSlot,
+.bookLeaf {
+  position: absolute;
+  top: 0;
+  width: var(--page-w);
+  height: 100%;
+}
+
+.bookSlotLeft,
+.bookLeaf-left {
+  left: 0;
+}
+
+.bookSlotRight,
+.bookLeaf-right {
+  left: var(--page-w);
+}
+
+.readerSingle .bookSlotRight,
+.readerSingle .bookLeaf-right {
+  left: 0;
+}
+
+/* A leaf is one sheet of paper hinged at the spine, printed on both sides. */
+.bookLeaf {
+  z-index: 2;
+  transform-style: preserve-3d;
+}
+
+.bookLeaf-right {
+  transform-origin: left center;
+}
+
+.bookLeaf-left {
+  transform-origin: right center;
+}
+
+.bookLeafFace {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.bookLeafBack {
+  transform: rotateY(180deg);
+}
+
+/* Light falling across the paper as it lifts. */
+.bookLeafShade {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+  background: linear-gradient(
+    to right,
+    rgba(20, 10, 50, 0.5),
+    rgba(20, 10, 50, 0) 70%
+  );
+}
+
+.bookLeaf-left .bookLeafFace:not(.bookLeafBack) .bookLeafShade,
+.bookLeaf-right .bookLeafBack .bookLeafShade {
+  transform: scaleX(-1);
+}
+
+.leafForward,
+.leafBackward,
+.leafAway,
+.leafReturn {
+  animation-duration: var(--turn);
+  animation-timing-function: cubic-bezier(0.5, 0, 0.5, 1);
+  animation-fill-mode: forwards;
+}
+
+.leafForward {
+  animation-name: leafForward;
+}
+
+.leafBackward {
+  animation-name: leafBackward;
+}
+
+.leafAway {
+  animation-name: leafAway;
+}
+
+.leafReturn {
+  animation-name: leafAway;
+  animation-direction: reverse;
+}
+
+.leafForward .bookLeafShade,
+.leafBackward .bookLeafShade {
+  animation: leafShade var(--turn) ease-in-out;
+}
+
+@keyframes leafForward {
+  to {
+    transform: rotateY(-180deg);
+  }
+}
+
+@keyframes leafBackward {
+  to {
+    transform: rotateY(180deg);
+  }
+}
+
+/* Single-page mode: the leaf swings out of the way and is gone. */
+@keyframes leafAway {
+  70% {
+    opacity: 1;
+  }
+  to {
+    transform: rotateY(-96deg);
+    opacity: 0;
+  }
+}
+
+@keyframes leafShade {
+  50% {
+    opacity: 0.55;
+  }
+}
+
+.bookLeaf .bookCover,
+.bookSlot .bookCover {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: auto;
+}
+
+/* The page itself */
+.bookPage {
+  position: absolute;
+  inset: 0;
+  background: var(--paper);
+  color: var(--ink);
+  overflow: hidden;
+}
+
+/* Each page darkens toward the gutter where it curves into the binding. */
+.bookPage-left {
+  border-radius: 6px 2px 2px 6px;
+  box-shadow: inset -34px 0 34px -30px rgba(39, 22, 80, 0.34);
+}
+
+.bookPage-right {
+  border-radius: 2px 6px 6px 2px;
+  box-shadow: inset 34px 0 34px -30px rgba(39, 22, 80, 0.34);
+}
+
+.readerSingle .bookPage {
+  border-radius: 4px 6px 6px 4px;
+  box-shadow: inset 18px 0 22px -20px rgba(39, 22, 80, 0.45);
+}
+
+.bookClip {
+  position: absolute;
+  top: var(--page-pad);
+  bottom: calc(var(--page-pad) * 1.35);
+  left: 0;
+  right: 0;
+  overflow: hidden;
+}
+
+/* The whole article lives in here as one column per page. Columns past the
+   first overflow to the right in steps of exactly one page width, and each
+   page slides the flow left to bring its own column into the window. */
+.bookFlow {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 0 var(--page-pad);
+  column-count: 1;
+  column-gap: calc(var(--page-pad) * 2);
+  column-fill: auto;
+  font-size: calc(clamp(13px, var(--page-w) * 0.031, 16px) * var(--font-scale));
+  line-height: 1.62;
+  overflow-wrap: anywhere;
+  orphans: 2;
+  widows: 2;
+}
+
+.bookFolio {
+  position: absolute;
+  bottom: calc(var(--page-pad) * 0.48);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: color-mix(in srgb, var(--ink) 50%, transparent);
+}
+
+.bookPage-left .bookFolio {
+  left: var(--page-pad);
+}
+
+.bookPage-right .bookFolio {
+  right: var(--page-pad);
+}
+
+.bookFlow h1,
+.bookFlow h2,
+.bookFlow h3 {
+  color: var(--ink);
+  text-shadow: none;
+  break-after: avoid;
+  break-inside: avoid;
+  text-wrap: balance;
+}
+
+.bookFlow h2 {
+  font-size: 1.36em;
+  line-height: 1.22;
+  margin: 1.5em 0 0.6em;
+}
+
+.bookFlow h3 {
+  font-size: 1.12em;
+  line-height: 1.3;
+  margin: 1.4em 0 0.5em;
+}
+
+.bookFlow p {
+  margin: 0 0 0.85em;
+}
+
+.bookFlow strong {
+  font-weight: 700;
+}
+
+.bookFlow a {
+  color: #5a35c2;
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, #5a35c2 40%, transparent);
+  text-underline-offset: 2px;
+}
+
+.bookFlow a:hover {
+  text-decoration-color: currentColor;
+}
+
+.bookFlow ul,
+.bookFlow ol {
+  margin: 0 0 0.95em;
+  padding-left: 1.3em;
+}
+
+.bookFlow ul {
+  list-style: disc;
+}
+
+.bookFlow ol {
+  list-style: decimal;
+}
+
+.bookFlow li {
+  margin-bottom: 0.3em;
+  break-inside: avoid;
+}
+
+.bookFlow li::marker {
+  color: color-mix(in srgb, var(--ink) 55%, transparent);
+}
+
+.bookFlow blockquote {
+  margin: 1.2em 0;
+  padding: 0.2em 0 0.2em 1em;
+  border-left: 3px solid var(--color-highlight-pink);
+  font-family: var(--font-heading);
+  font-size: 1.1em;
+  line-height: 1.4;
+  break-inside: avoid;
+}
+
+.bookFlow figure {
+  margin: 1.1em 0 1.2em;
+  text-align: center;
+  break-inside: avoid;
+}
+
+/* Width and aspect ratio are set inline per image, capped so no figure is
+   taller than about half a page. */
+.bookFlow figure img {
+  display: block;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 4px;
+  border: 1px solid color-mix(in srgb, var(--ink) 14%, transparent);
+}
+
+.bookFlow figcaption {
+  margin-top: 0.5em;
+  font-size: 0.82em;
+  font-style: italic;
+  color: color-mix(in srgb, var(--ink) 62%, transparent);
+}
+
+.bookPost {
+  font-size: 0.9em;
+  padding: 0.6em 0.9em;
+  border: 1px dashed color-mix(in srgb, var(--ink) 30%, transparent);
+  border-radius: 8px;
+  break-inside: avoid;
+}
+
+/* Page one: the title page. It ends its column so the essay starts on page two. */
+.bookTitlePage {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  break-after: column;
+  break-inside: avoid;
+}
+
+.bookTitleKicker {
+  font-size: 0.74em;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--ink) 55%, transparent);
+  margin: 0 0 1em !important;
+}
+
+.bookFlow .bookTitlePage h1 {
+  font-size: 1.95em;
+  line-height: 1.12;
+  margin: 0 0 0.6em;
+}
+
+.bookTitleMeta {
+  font-size: 0.86em;
+  color: color-mix(in srgb, var(--ink) 62%, transparent);
+}
+
+
+.bookTitleArt {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: auto 0;
+  border-radius: 4px;
+  border: 1px solid color-mix(in srgb, var(--ink) 14%, transparent);
+}
+
+.bookTitleSource {
+  font-size: 0.82em;
+  color: color-mix(in srgb, var(--ink) 62%, transparent);
+  margin: 0 !important;
+}
+
+/* Page controls pinned to the bottom of the screen. They fade once the reader
+   scrolls down to the details. */
+.readerBar {
+  position: fixed;
+  left: 40px;
+  right: 40px;
+  bottom: 14px;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: 36px;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.readerScrolled .readerBar {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.readerBar button {
+  border: none;
+  background: none;
+  padding: 8px 4px;
+  font: inherit;
+  font-size: 0.86rem;
+  color: var(--color-text-muted);
+  transition: color 0.18s ease;
+}
+
+.readerBar button:hover {
+  color: var(--color-text);
+}
+
+.readerBar button:disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.readerLabel {
+  font-size: 0.86rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--color-text-muted);
+}
+
+.readerBar .readerDown {
+  margin: 0 auto;
+  animation: downNudge 2.2s cubic-bezier(0.37, 0, 0.63, 1) 0.8s infinite;
+}
+
+.readerDown svg {
+  display: block;
+  width: 22px;
+  height: 22px;
+}
+
+@keyframes downNudge {
+  50% {
+    transform: translateY(5px);
+  }
+}
+
+/* Below the book: what the article is and where its sections are. */
+.readerDetails {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  gap: 0 64px;
+  width: min(1100px, calc(100% - 64px));
+  margin: 0 auto;
+  padding: 30px 0 96px;
+  border-top: 1px dashed var(--color-rail);
+}
+
+.readerDetailsTitle {
+  margin: 0;
+  max-width: 20ch;
+  font-size: clamp(1.7rem, 2.9vw, 2.4rem);
+  line-height: 1.2;
+  text-wrap: balance;
+}
+
+.readerDetails dl {
+  margin: 0;
+}
+
+.readerDetails dl > div {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px dashed var(--color-rail);
+  font-size: 0.92rem;
+}
+
+.readerDetails dl > div:first-child {
+  padding-top: 0;
+}
+
+.readerDetails dt {
+  color: var(--color-text-dim);
+}
+
+.readerDetails dd {
+  margin: 0;
+}
+
+.readerDetailsActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.readerShareNote {
+  min-height: 1.4em;
+  margin: 10px 0 0;
+  font-size: 0.84rem;
+  color: var(--color-text-muted);
+  overflow-wrap: anywhere;
+}
+
+.readerContents {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: subgrid;
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px dashed var(--color-rail);
+}
+
+.readerContents h3 {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  font-weight: 400;
+  color: var(--color-text-dim);
+  text-shadow: none;
+}
+
+.readerContents ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.readerContents button {
+  display: grid;
+  grid-template-columns: 32px 1fr auto;
+  gap: 8px;
+  width: 100%;
+  padding: 14px 0;
+  border: none;
+  border-bottom: 1px dashed var(--color-rail);
+  background: none;
+  color: var(--color-text);
+  font: inherit;
+  font-size: 0.98rem;
+  line-height: 1.45;
+  text-align: left;
+  transition: color 0.18s ease;
+}
+
+.readerContents li:first-child button {
+  padding-top: 0;
+}
+
+.readerContents button > :first-child {
+  font-size: 0.78rem;
+  line-height: 1.9;
+  color: var(--color-text-dim);
+}
+
+.readerContents button > :last-child {
+  color: var(--color-text-dim);
+  transition: transform 0.18s ease, color 0.18s ease;
+}
+
+.readerContents button:hover > :last-child {
+  color: var(--color-text);
+  transform: translate(2px, -2px);
+}
+
+/* Scroll mode: the same essay as one long sheet of the same paper. */
+.readingSheet {
+  position: relative;
+  z-index: 1;
+  width: min(740px, calc(100% - 24px));
+  margin: 72px auto 56px;
+  padding: clamp(28px, 6vw, 56px);
+  border-radius: 6px;
+  background: var(--paper);
+  color: var(--ink);
+  box-shadow: 0 26px 60px rgba(0, 0, 0, 0.5);
+  animation: sheetIn 0.3s ease-out;
+}
+
+@keyframes sheetIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+
+.readingFlow {
+  height: auto;
+  padding: 0;
+  column-count: auto;
+  font-size: calc(17px * var(--font-scale));
+  line-height: 1.7;
+}
+
+.readingFlow .bookTitlePage {
+  height: auto;
+  gap: 0.4em;
+  margin-bottom: 2em;
+  break-after: auto;
+}
+
+
+.readingFlow .bookTitleArt {
+  margin: 1.2em 0;
+}
+
+.readingFlow figure img {
+  width: 100% !important;
+  max-width: 560px;
+}
+
+.readingFlow [data-block] {
+  scroll-margin-top: 80px;
+}
+
+.readingEnd {
+  margin: 3em 0 0;
+  padding-top: 1.4em;
+  border-top: 1px dashed color-mix(in srgb, var(--ink) 30%, transparent);
+  font-size: 0.8rem;
+  color: color-mix(in srgb, var(--ink) 60%, transparent);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .bookCard,
+  .bookSheet,
+  .readerIcon,
+  .readerPanel button,
+  .readerBar button,
+  .readerContents button {
+    cursor: url("/cursor-pointer.svg") 9 8, pointer;
+  }
+}
+
+@media (max-width: 1040px) {
+  .shelf {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 860px) {
+  .shelf {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 40px 26px;
+  }
+
+  .headerNav {
+    gap: 14px;
+    flex-shrink: 0;
+  }
+
+  .headerNav .btn {
+    padding: 9px 16px;
+    font-size: 0.86rem;
+  }
+
+  .headerIdentity {
+    overflow: hidden;
+  }
+
+  .headerName {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .readerBar {
+    left: 18px;
+    right: 18px;
+  }
+
+  .readerDetails {
+    grid-template-columns: 1fr;
+    width: calc(100% - 36px);
+  }
+
+  .readerDetailsTitle {
+    margin-bottom: 26px;
+  }
+
+  .readerContents {
+    display: block;
+  }
+
+  .readerContents h3 {
+    margin-bottom: 18px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shelf > li,
+  .readerDown,
+  .readerPanel,
+  .readingSheet {
+    animation: none;
+  }
+
+
+  .bookCard .bookCover,
+  .bookSheet,
+  .bookUnderlay {
+    transition: none;
   }
 }

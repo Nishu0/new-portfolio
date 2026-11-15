@@ -1,5 +1,6 @@
 import { Reveal } from "@/components/reveal";
 import { PhotoStrip } from "@/components/photo-strip";
+import { InstagramIcon, LinkedInIcon, MailIcon, XIcon } from "@/components/icons";
 import { profile } from "@/lib/data";
 
 export function Hero() {
@@ -13,27 +14,26 @@ export function Hero() {
           <p className="heroSubhead">{profile.subhead}</p>
         </Reveal>
         <Reveal delay={160}>
-          <div className="heroCtaRow">
-            <a className="btn" href="#contact">
-              Get in touch
+          <nav className="heroLinks" aria-label="Find me elsewhere">
+            <a className="heroLink" href={profile.links.x} target="_blank" rel="noreferrer">
+              <XIcon size={14} />
+              Twitter
             </a>
-            <p className="heroMeta">
-              <svg
-                className="heroMetaIcon"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth={2}
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                aria-hidden="true"
-              >
-                <path d="M12 21s-7-5.5-7-11a7 7 0 1 1 14 0c0 5.5-7 11-7 11z" />
-                <circle cx="12" cy="10" r="2.5" />
-              </svg>
-              {profile.location}
-            </p>
-          </div>
+            <a className="heroLink" href={profile.links.linkedin} target="_blank" rel="noreferrer">
+              <LinkedInIcon size={14} />
+              LinkedIn
+            </a>
+            <a className="heroLink" href={profile.links.instagram} target="_blank" rel="noreferrer">
+              <InstagramIcon size={15} />
+              Instagram
+            </a>
+            {profile.email && (
+              <a className="heroLink" href={`mailto:${profile.email}`}>
+                <MailIcon size={15} />
+                Email
+              </a>
+            )}
+          </nav>
         </Reveal>
       </div>
       <Reveal delay={220}>

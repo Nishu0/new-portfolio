@@ -1,0 +1,740 @@
+{
+ "slug": "forgot-why-we-started-building",
+ "title": "somewhere along the way, we forgot why we started building",
+ "date": "2026-07-20",
+ "url": "https://x.com/itsnishutwt/status/2079251108619595798",
+ "cover": {
+  "src": "/writing/forgot-why-we-started-building/cover-full.jpg",
+  "width": 1536,
+  "height": 1024
+ },
+ "excerpt": "we ship repos like they're tweets. we optimize for the screenshot. we prompt our way through projects we couldn't explain, one thing.",
+ "minutes": 8,
+ "blocks": [
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "we ship repos like they're tweets. we optimize for the screenshot. we prompt our way through projects we couldn't explain, one thing."
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "somewhere between the \"ai will replace you\" panic and the 47th \"i built this in a weekend\" thread, we forgot the actual point."
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "i grew up watching a different breed of builder. this is about them, and about what we lost when we stopped being them."
+    }
+   ]
+  },
+  {
+   "type": "h2",
+   "segs": [
+    {
+     "t": "the people who made me open an editor"
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "when i grew up, i watched these tech bros online."
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "not the ones you're picturing rn. not the podcast setup, \"how i built a saas in 48 hours\" thread energy guys."
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "the ones i mean had one project, maybe two, and they loved it."
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "not \"loved it\" as a stepping stone to funding or followers. loved it like they'd be up at 1am on a wednesday bcs the damn thing didn't compile and they couldn't sleep until it did."
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "that's what made me want to code, not the money, not the \"build in public\" strategy the love of the thing itself."
+    }
+   ]
+  },
+  {
+   "type": "h2",
+   "segs": [
+    {
+     "t": "that era is on life support"
+    }
+   ]
+  },
+  {
+   "type": "h3",
+   "segs": [
+    {
+     "t": "shift 1: the \"one thing\" became \"five things\""
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "the builders i admired picked one thing and disappeared into it. no roadmap, no audience, sometimes no money, just depth."
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "now? everyone's running 3 projects at once. 3 half baked repos. 3 \"mvp\"s that are really just a landing page and a tweet."
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "t's the "
+    },
+    {
+     "t": "vibe",
+     "i": true
+    },
+    {
+     "t": " that building more = being more of a builder."
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "but"
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "building more ≠ building better and building more ≠ building with love."
+    }
+   ]
+  },
+  {
+   "type": "img",
+   "src": "/writing/forgot-why-we-started-building/01.png",
+   "width": 700,
+   "height": 449
+  },
+  {
+   "type": "h3",
+   "segs": [
+    {
+     "t": "shift 2: ai made building frictionless"
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "i use ai everyday. they're useful."
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "but there was something in the struggle. when you had to actually understand a bug read docs, ask on stackoverflow at 2am, refactor the whole damn function bcs you finally saw the architecture wrong. that struggle is what made you love the craft."
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "now? \"hey [insert tool], fix this.\" done. next."
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "you shipped faster. great. but did you understand it? did you earn it?"
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "the friction was the point. the friction is where the love lived."
+    }
+   ]
+  },
+  {
+   "type": "img",
+   "src": "/writing/forgot-why-we-started-building/02.jpg",
+   "width": 1536,
+   "height": 1024
+  },
+  {
+   "type": "h3",
+   "segs": [
+    {
+     "t": "shift 3: visibility became the goal and the trend cycle ate the quiet builders"
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "\"building in public\" used to mean: here's what i'm learning, here's what broke, here's what i'm figuring out."
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "now it too often means: here's my growth chart, here's my arr, here's my follower count, here's why you should invest in me."
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "the project is secondary. the personal brand is primary. and when the brand is the product, the project gets worse. bcs you're optimizing for the screenshot, not the code."
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "the trend cycle rewards breadth. the craft rewards depth. you can't serve both."
+    }
+   ]
+  },
+  {
+   "type": "h3",
+   "segs": [
+    {
+     "t": "so where's the revolution?"
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "think about it. linux, git, rails, node, vue, svelte, and most imp "
+    },
+    {
+     "t": "ffmpeg",
+     "b": true
+    },
+    {
+     "t": ". every one of those came from someone obsessed with ONE problem for years."
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "torvalds didn't a/b test git's launch thread. dhh didn't drop rails with a \"like + rt and i'll dm you the repo\" post. they went deep, disappeared into the work, and came out with something that changed everything."
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "we have more devs than ever. more tools than ever. cheaper compute than ever. and somehow, fewer revolutions."
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "why? bcs the energy that would've become a revolution now gets sliced into 15 launches, 40 threads and 3 pivots a year."
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "the attention economy pays out weekly. revolutions pay out in decades. so everyone takes the weekly payout.",
+     "b": true
+    }
+   ]
+  },
+  {
+   "type": "quote",
+   "segs": [
+    {
+     "t": "no villain here. just incentives. but incentives shape what gets built, and right now they're shaping a generation of builders who are wide and shallow."
+    }
+   ]
+  },
+  {
+   "type": "img",
+   "src": "/writing/forgot-why-we-started-building/03.jpg",
+   "width": 1536,
+   "height": 1024,
+   "caption": "ohh let me comment on new model that launched"
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "when you build one thing for months, you know it. not \"know it\" like you can explain the architecture. know it like you know a person. you know its moods. you know what breaks it. you know the hack you put in at 4am that's still holding the whole thing together bcs you never refactored it."
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "that intimacy with your own code that's where the love was."
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "when you ship 3 projects in a week with ai, you don't have that. you have 3 repos you barely understand, all waiting for the first real user to find the bug you didn't know existed."
+    }
+   ]
+  },
+  {
+   "type": "h2",
+   "segs": [
+    {
+     "t": "okay it's not all bad (seriously)"
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "what's genuinely better now:"
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "more people can build. a kid in a small town with a laptop and wifi can ship something real. that's not nothing."
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "the tools are faster. you can prototype in a day what took a week. ideas that would've died in the \"i'll do it this weekend\" graveyard actually get built."
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "the community is bigger. when i was starting, finding builders to learn from was hard."
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "and here's the best part: the craft is quietly winning again. look at the rewrite wave."
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "bun:",
+     "b": true
+    },
+    {
+     "t": " in 2026, jarred rewrote all of bun 535k lines of zig into rust. in 11 days. using ~64 claude agents running in parallel with adversarial ai reviewers checking every line. cost ~$165k in api credits. the alternative estimate? 3 engineers, full year, feature freeze the whole time."
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "more about here: "
+    },
+    {
+     "t": "https://bun.com/blog/bun-in-rust",
+     "href": "https://bun.com/blog/bun-in-rust"
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "(disclosure worth knowing: bun got acquired by anthropic and he used a prerelease claude model. still.) the"
+    },
+    {
+     "t": " only reason 64",
+     "b": true
+    },
+    {
+     "t": " agents didn't produce a million lines of garbage is that one human knew that codebase like a person."
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "that's the lesson. ai didn't replace the craft. the craft is what made the ai usable. depth + leverage > leverage alone. a dev with 5 half baked repos could never have pulled this off  there's no intimacy to leverage."
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "ghostty: ",
+     "b": true
+    },
+    {
+     "t": "mitchell hashimoto sold hashicorp, could retire forever, and chose to... write a terminal emulator in zig. bcs he wanted to. that's the old energy, alive in 2026."
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "notice the pattern? every single one of these is a person going "
+    },
+    {
+     "t": "deep",
+     "b": true
+    },
+    {
+     "t": " on "
+    },
+    {
+     "t": "one",
+     "b": true
+    },
+    {
+     "t": " thing. the only revolutions happening right now are coming from people who never left the old mode. and when those people pick up ai, they don't ship slop faster they do a year of work in 11 days."
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "the tools didn't kill the craft. they just made the craft optional. and the ones who still choose it are eating everyone's lunch."
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "so no, i'm not arguing we go back to vim configs and stackoverflow at 3am (okay maybe a little)."
+    }
+   ]
+  },
+  {
+   "type": "h2",
+   "segs": [
+    {
+     "t": "what we actually lost"
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "it's not the struggle. struggling sucks. nobody misses the bug."
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "what we lost is the relationship with the work."
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "when you build one thing for months, you know it. not \"know it\" like you can explain the architecture. know it like you know a person. you know its moods. you know what breaks it. you know the hack you put in at 4am that's still holding the whole thing together bcs you never refactored it."
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "that intimacy with your own code  that's where the love was."
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "when you ship 3 projects in a week with ai, you don't have that. you have 3 repos you barely understand, all waiting for the first real user to find the bug you didn't know existed."
+    }
+   ]
+  },
+  {
+   "type": "h2",
+   "segs": [
+    {
+     "t": "the love isn't dead (here's the proof)"
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "here's the thing i realized while writing this: the builders i admired growing up? some of them are "
+    },
+    {
+     "t": "still doing it",
+     "i": true
+    },
+    {
+     "t": ". right now. in 2026. and they never stopped."
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "take "
+    },
+    {
+     "t": "tsoding daily:",
+     "b": true
+    },
+    {
+     "t": " streams himself building from scratch low level no frameworks holding his hand he'll spend hours on a memory allocator or a parser bcs he genuinely wants to understand how the thing works no product launch no arr screenshot just a guy who loves code so much he does it live."
+    }
+   ]
+  },
+  {
+   "type": "img",
+   "src": "/writing/forgot-why-we-started-building/04.jpg",
+   "width": 1780,
+   "height": 1187
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "the cherno (yan chernikov):",
+     "b": true
+    },
+    {
+     "t": " he's been building his own custom c++ game engine, "
+    },
+    {
+     "t": "hazel",
+     "i": true
+    },
+    {
+     "t": ", for "
+    },
+    {
+     "t": "7 years",
+     "b": true
+    },
+    {
+     "t": ". not bcs it'll make him rich not bcs there's a market for yet another engine bcs he loves it he loves the craft of understanding how a game engine works, piece by piece, from the renderer to the event system to the scripting layer and he teaches it as he goes."
+    }
+   ]
+  },
+  {
+   "type": "img",
+   "src": "/writing/forgot-why-we-started-building/05.jpg",
+   "width": 1778,
+   "height": 1079
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "these aren't anomalies the people building for the love of it are still here. you just have to look past the hype to find them"
+    }
+   ]
+  },
+  {
+   "type": "h2",
+   "segs": [
+    {
+     "t": "you're free to build whatever you want"
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "you don't have to build what's hot you don't have to build what's fundable  you don't have to build what's \"useful\" by someone else's definition you don't have to build with the stack everyone's hyping. you don't have to build something that scales."
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "and that's not wasted time that's the whole point."
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "bcs when you build something purely bcs you want to, no users to please, no metrics to hit, no timeline to optimize, you build a relationship with the work that no amount of \"shipping fast\" will ever give you."
+    }
+   ]
+  },
+  {
+   "type": "h2",
+   "segs": [
+    {
+     "t": "the \"one thing\" thing (i'm actually doing this)"
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "not gonna give you a challenge like some productivity guru. i'll just tell you what i'm doing."
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "for the last 30 days i've been building one thing. okay, two. but that's it."
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "and here's the part that surprised me: i have the time to do more. i have the ai tools to spin up 4 more repos this weekend. i could and i'm choosing not to."
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "bcs it's not needed. more projects wouldn't make the current one better. they'd just make it lonelier."
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "going deep on one thing looks like understanding every file. writing the ugly hack at 3am and refactoring it at 9am reading the docs you skipped breaking it on purpose to see what happens. knowing it like a person."
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "no \"building in public\" strategy for it. no \"when this hits 1k users i'll...\" just building it bcs i want to."
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "try it for 30 days if this resonated. if you get bored, fine  it wasn't your one thing, move on. but i bet you'll be more invested in that one project than the last 5 combined."
+    }
+   ]
+  },
+  {
+   "type": "img",
+   "src": "/writing/forgot-why-we-started-building/06.jpg",
+   "width": 1672,
+   "height": 941
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "thanks for reading. lmk if this hit or cmt if you think i'm romanticizing the good old days."
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "lastly, tsoding, primeagen, and grant sanderson if you ever read this, never stop streaming and creating videos. thanks for inspiring me."
+    }
+   ]
+  }
+ ]
+}

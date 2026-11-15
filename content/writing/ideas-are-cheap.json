@@ -1,0 +1,1464 @@
+{
+ "slug": "ideas-are-cheap",
+ "title": "ideas are cheap: do market study, validate demand, ship <-> find pmf",
+ "date": "2025-11-19",
+ "url": "https://x.com/itsnishutwt/status/1991129810350039361",
+ "cover": {
+  "src": "/writing/ideas-are-cheap/cover.jpg",
+  "width": 1250,
+  "height": 500
+ },
+ "excerpt": "just got back from aptos winter school last week met a bunch of hackers college kids at their first event, some web3 newbies, some seasoned web3 builders.",
+ "minutes": 8,
+ "blocks": [
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "just got back from aptos winter school last week met a bunch of hackers college kids at their first event, some web3 newbies, some seasoned web3 builders."
+    }
+   ]
+  },
+  {
+   "type": "h2",
+   "segs": [
+    {
+     "t": "the reality check nobody asked for"
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "here's the pattern i kept seeing: "
+    },
+    {
+     "t": "most of newbies thinks people are dying to mint their nft or getting their token.",
+     "b": true
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "\"bro our token will be so cool, people will definitely buy it\""
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "\"imagine having our project's nft, it's gonna be fire\""
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "\"we'll do airdrops and people will go crazy\""
+    }
+   ]
+  },
+  {
+   "type": "img",
+   "src": "/writing/ideas-are-cheap/01.png",
+   "width": 736,
+   "height": 790,
+   "caption": "delulu devs"
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "spoiler: "
+    },
+    {
+     "t": "no one gives a fuck about your nft or token unless",
+     "b": true
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "not unless it does something and no, \"community access\" is not utility that's just a discord server with extra steps."
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "the brutal truth?"
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "ideas are cheap. execution is expensive. utility is _____ (figure out).",
+     "b": true
+    }
+   ]
+  },
+  {
+   "type": "h2",
+   "segs": [
+    {
+     "t": "ideation (aka what not to build)"
+    }
+   ]
+  },
+  {
+   "type": "img",
+   "src": "/writing/ideas-are-cheap/02.png",
+   "width": 500,
+   "height": 500,
+   "caption": "prd looks good idea is shit"
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "here's your first filter before you waste 2 weeks and ₹2k in ai credits (but you can always fafo):"
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "the graveyard"
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "❌ "
+    },
+    {
+     "t": "another marketplace",
+     "b": true
+    },
+    {
+     "t": " - unless you have a genuinely novel mechanism, you're building opensea #47"
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "❌ "
+    },
+    {
+     "t": "crowdsourcing platform",
+     "b": true
+    },
+    {
+     "t": " - these die slower but they still die no one wants to crowdsource on your unproven platform"
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "❌ ai "
+    },
+    {
+     "t": "agent wrapper for docs",
+     "b": true
+    },
+    {
+     "t": " - cool for your project docs, terrible as the entire project (unless it's literally a hackathon track requirement)"
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "why? because you can build any of these features into one platform. and when you realize that at 2am on day 3 of the hackathon, you'll regret everything."
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "the real question isn't \"what can i build?\" it's \"what should i avoid building?\"",
+     "b": true
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "with ai and little bit of knowledge, you can build anything*(atleast mvp). that's the trap. you'll prototype 5 different \"revolutionary\" ideas and ship none of them because you kept pivoting."
+    }
+   ]
+  },
+  {
+   "type": "h2",
+   "segs": [
+    {
+     "t": "market study (or stop living in your bubble)"
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "actual market study isn't reading a cool article about building xyz for 20 minutes.",
+     "b": true
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "here's what i mean:"
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "study the chain you're building on"
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "look at what's missing. not what exists what's missing piece."
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "example: aptos also didn't have a web based ide like remix. someone was building that at winter school. think about it no bs installation, just open browser, test your small code on the go, compile, deploy if you like. makes dev life 10x easier ("
+    },
+    {
+     "t": "@MoveZero",
+     "href": "https://x.com/MoveZero"
+    },
+    {
+     "t": ")."
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "example2: aptos didn't have x402 there was massive hype around x402 in ct someone built it on aptos ("
+    },
+    {
+     "t": "@aptosx402",
+     "href": "https://x.com/aptosx402"
+    },
+    {
+     "t": "). boom instant visibility and ecosystem support."
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "result:"
+    }
+   ]
+  },
+  {
+   "type": "post",
+   "href": "https://x.com/i/status/1987846203099504908"
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "why this works:",
+     "b": true
+    },
+    {
+     "t": " you're solving a real gap. the chain wants this feature. they'll amplify you. users from other chains already know the pattern. you're not educating from zero."
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "study what worked elsewhere"
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "see pendle's success? someone built a small version on aptos during winter school ("
+    },
+    {
+     "t": "@TesserApt",
+     "href": "https://x.com/TesserApt"
+    },
+    {
+     "t": ")."
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "why is this not \"just copying\"? because:"
+    }
+   ]
+  },
+  {
+   "type": "ol",
+   "items": [
+    [
+     {
+      "t": "execution matters more than the idea"
+     }
+    ],
+    [
+     {
+      "t": "different chains have different constraints"
+     }
+    ],
+    [
+     {
+      "t": "you're bringing validated demand to an underserved market"
+     }
+    ]
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "if you're stuck on ideas, "
+    },
+    {
+     "t": "look at successful defi protocols on other chains and bring them intelligently(you can add your own twist).",
+     "b": true
+    }
+   ]
+  },
+  {
+   "type": "h3",
+   "segs": [
+    {
+     "t": "the defi knowledge advantage"
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "here's something most devs skip: "
+    },
+    {
+     "t": "study defi protocols even when you're not building.",
+     "b": true
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "just take the know protocols - aave, compound, uniswap v3/v4, curve, yearn, pendle. understand how they work:"
+    }
+   ]
+  },
+  {
+   "type": "ul",
+   "items": [
+    [
+     {
+      "t": "how does their liquidation mechanism work?"
+     }
+    ],
+    [
+     {
+      "t": "what's their oracle strategy?"
+     }
+    ],
+    [
+     {
+      "t": "how do they handle edge cases?"
+     }
+    ]
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "why does this matter if you're building a simple swap interface?",
+     "b": true
+    }
+   ]
+  },
+  {
+   "type": "img",
+   "src": "/writing/ideas-are-cheap/03.png",
+   "width": 500,
+   "height": 500,
+   "caption": "defi knowledge"
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "bcs when you do need to add complexity (and you will) you'll have mental models to work from you won't be googling \"how does lending protocol work\" at 3am during the hackathon."
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "even if you never build defi, this knowledge compounds",
+     "b": true
+    },
+    {
+     "t": " you'll spot opportunities others miss you'll understand why certain mechanisms fail you'll build better products in any domain."
+    }
+   ]
+  },
+  {
+   "type": "h3",
+   "segs": [
+    {
+     "t": "the consumer play (underrated as fuck)"
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "hot take: consumer focused crypto is having a moment."
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "while everyone's building the 47th dex/perps for degens, there's a massive gap in products that normal people can actually use."
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "if you're building something that:"
+    }
+   ]
+  },
+  {
+   "type": "ul",
+   "items": [
+    [
+     {
+      "t": "onboards new users without wallet complexity"
+     }
+    ],
+    [
+     {
+      "t": "doesn't require understanding gas, slippage, or liquidity pools"
+     }
+    ],
+    [
+     {
+      "t": "solves a real problem outside crypto"
+     }
+    ]
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "you're already ahead of 80% of hackathon projects in terms of addressable market."
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "example: ",
+     "b": true
+    },
+    {
+     "t": "@",
+     "b": true,
+     "href": "https://x.com/aion_org"
+    },
+    {
+     "t": "aion_org",
+     "href": "https://x.com/aion_org"
+    },
+    {
+     "t": " at aptos winter school",
+     "b": true
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "simple concept spend your stablecoins like a normal credit card. no complexity. no \"connect wallet, approve token, sign transaction, wait for confirmation\" dance."
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "just: deposit and use it like normal cc, payment goes through."
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "that's the kind of ux that brings normies into crypto. not another complicated interface with 8 input fields and 7 warnings about impermanent loss."
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "if your target user is someone who doesn't already use metamask/petra daily, you might just win the mainstream race.",
+     "b": true
+    }
+   ]
+  },
+  {
+   "type": "h2",
+   "segs": [
+    {
+     "t": "study hype (some times timing is everything)"
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "hackathons aren't about building forever products. they're about building now products."
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "the hype cycle matters:",
+     "b": true
+    }
+   ]
+  },
+  {
+   "type": "ul",
+   "items": [
+    [
+     {
+      "t": "what's trending in ct (crypto twitter) rn?"
+     }
+    ],
+    [
+     {
+      "t": "what's the chain's current focus?"
+     }
+    ],
+    [
+     {
+      "t": "what are the big vcs talking about?"
+     }
+    ]
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "if solana is pushing gaming, build games on solana. if aptos is focusing on defi primitives, build DeFi on aptos (this is just an example)."
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "example: ",
+     "b": true
+    },
+    {
+     "t": "@SENDArcadeX",
+     "href": "https://x.com/SENDArcadeX"
+    },
+    {
+     "t": "  "
+    },
+    {
+     "t": " on solana",
+     "b": true
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "if you're building games, study send arcade. they got the core right:"
+    }
+   ]
+  },
+  {
+   "type": "ol",
+   "items": [
+    [
+     {
+      "t": "fun comes first",
+      "b": true
+     },
+     {
+      "t": " - the game is actually playable and fun to play"
+     }
+    ],
+    [
+     {
+      "t": "monetization comes later",
+      "b": true
+     },
+     {
+      "t": " - they didn't start with \"how do we extract value from players\""
+     }
+    ]
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "and result:"
+    }
+   ]
+  },
+  {
+   "type": "post",
+   "href": "https://x.com/i/status/1965303037561634970"
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "shout out to cool games built at winter school ("
+    },
+    {
+     "t": "@apt_ninja",
+     "href": "https://x.com/apt_ninja"
+    },
+    {
+     "t": "  and "
+    },
+    {
+     "t": "@0xPepasur",
+     "href": "https://x.com/0xPepasur"
+    },
+    {
+     "t": " )"
+    }
+   ]
+  },
+  {
+   "type": "h2",
+   "segs": [
+    {
+     "t": "building mvp (ship the cycle, skip the circus)"
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "universal dev disease and early founder problem: feature creep",
+     "b": true
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "you think: \"i need all these features to be taken seriously\""
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "reality: \"i need one thing that works perfectly to be taken seriously\""
+    }
+   ]
+  },
+  {
+   "type": "img",
+   "src": "/writing/ideas-are-cheap/04.jpg",
+   "width": 960,
+   "height": 782,
+   "caption": "feature trap"
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "nobody cares about 20+ features launched by your project it should do your core correctly others are just complimentary addition"
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "great example of one feature done well (instant withdrawals) :"
+    }
+   ]
+  },
+  {
+   "type": "post",
+   "href": "https://x.com/i/status/1988200891342569475"
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "what's a cycle feature?"
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "cycle = your core user flow works end to end",
+     "b": true
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "for a lending protocol:"
+    }
+   ]
+  },
+  {
+   "type": "ul",
+   "items": [
+    [
+     {
+      "t": "deposit"
+     }
+    ],
+    [
+     {
+      "t": "borrow"
+     }
+    ],
+    [
+     {
+      "t": "repay"
+     }
+    ],
+    [
+     {
+      "t": "withdraw"
+     }
+    ]
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "that's the cycle. everything else is circus:"
+    }
+   ]
+  },
+  {
+   "type": "ul",
+   "items": [
+    [
+     {
+      "t": "ai powered credit scoring ❌ (later)"
+     }
+    ],
+    [
+     {
+      "t": "multi chain bridging ❌ (later)"
+     }
+    ],
+    [
+     {
+      "t": "governance tokens ❌ (later)"
+     }
+    ],
+    [
+     {
+      "t": "revenue sharing dashboard ❌ (later)"
+     }
+    ]
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "ship the cycle. skip the circus.",
+     "b": true
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "the mvp priority stack"
+    }
+   ]
+  },
+  {
+   "type": "ol",
+   "items": [
+    [
+     {
+      "t": "core functionality",
+      "b": true
+     },
+     {
+      "t": " - does the main thing work?"
+     }
+    ],
+    [
+     {
+      "t": "basic ux",
+      "b": true
+     },
+     {
+      "t": " - can someone fig it out in 30 sec?"
+     }
+    ],
+    [
+     {
+      "t": "docs",
+      "b": true
+     },
+     {
+      "t": " - if it's infra, this is non negotiable"
+     }
+    ],
+    [
+     {
+      "t": "everything else",
+      "b": true
+     },
+     {
+      "t": " - if you have time, great. if not doesn't matter."
+     }
+    ]
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "critical for infra projects:",
+     "b": true
+    },
+    {
+     "t": " if you're building something other devs integrate with, your docs are your product. no docs = no adoption."
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "the integration trap"
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "\"let's integrate with 5 other projects to show ecosystem collaboration\""
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "no integrate with one project that validates your core thesis."
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "more integrations = more surface area for bugs = more demo fails = more stress"
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "pick one integration that matters make it flawless add others post hackathon"
+    }
+   ]
+  },
+  {
+   "type": "img",
+   "src": "/writing/ideas-are-cheap/05.jpg",
+   "width": 1200,
+   "height": 630
+  },
+  {
+   "type": "h2",
+   "segs": [
+    {
+     "t": "bringing in first 100 users (the easy part)"
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "okay, you shipped. now what?"
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "post on ct"
+    }
+   ]
+  },
+  {
+   "type": "ul",
+   "items": [
+    [
+     {
+      "t": "spam the hackathon discord"
+     }
+    ],
+    [
+     {
+      "t": "dm your builder friends"
+     }
+    ],
+    [
+     {
+      "t": "get featured in the showcase"
+     }
+    ]
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "you'll hit 100 \"users\" in a day."
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "but here's the uncomfortable truth: 90 of them won't come back.",
+     "b": true
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "they'll try it once because:"
+    }
+   ]
+  },
+  {
+   "type": "ul",
+   "items": [
+    [
+     {
+      "t": "you asked them to"
+     }
+    ],
+    [
+     {
+      "t": "hackathon curiosity"
+     }
+    ],
+    [
+     {
+      "t": "supportive community vibes"
+     }
+    ]
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "and then? nothing. unless..."
+    }
+   ]
+  },
+  {
+   "type": "h3",
+   "segs": [
+    {
+     "t": "the retention game"
+    }
+   ]
+  },
+  {
+   "type": "img",
+   "src": "/writing/ideas-are-cheap/06.jpg",
+   "width": 1185,
+   "height": 1156
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "what to track:",
+     "b": true
+    }
+   ]
+  },
+  {
+   "type": "ul",
+   "items": [
+    [
+     {
+      "t": "where do users drop off?"
+     }
+    ],
+    [
+     {
+      "t": "what confused them?"
+     }
+    ],
+    [
+     {
+      "t": "what did they try to do that you didn't support?"
+     }
+    ],
+    [
+     {
+      "t": "what did they say in their feedback?"
+     }
+    ]
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "critical: not all feedback is equal",
+     "b": true
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "❌ \"add dark mode\" - nice to have (for eyes)"
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "❌ \"needs ai features\" - probably distraction"
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "✅ \"couldn't figure out how to withdraw\" - critical"
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "✅ \"waited 2 minutes for confirmation\" - critical"
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "\"not sure what this button does\" - critical"
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "fix the friction, ignore the features.",
+     "b": true
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "if you're building long term or planning a mainnet launch, from these 100 users 10 users are your feedback. some of them’ll tell you what's broken. they'll show you where the ux sucks. they'll expose your assumptions."
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "very few of them will become actual users. but they'll make your product good enough that the next 100."
+    }
+   ]
+  },
+  {
+   "type": "h2",
+   "segs": [
+    {
+     "t": "finding pmf (not expert on this)"
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "i’m a dev and still don’t know how to perfect it. here’s a great session given by "
+    },
+    {
+     "t": "@anshitaksoni",
+     "href": "https://x.com/anshitaksoni"
+    },
+    {
+     "t": " summary covered by "
+    },
+    {
+     "t": "@0xTanishaa",
+     "href": "https://x.com/0xTanishaa"
+    },
+    {
+     "t": "."
+    }
+   ]
+  },
+  {
+   "type": "post",
+   "href": "https://x.com/i/status/1983900666650386744"
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "my pov",
+     "b": true
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "most hackathon projects will never find pmf. that's fine, the goal is learning."
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "but if you want to turn your hack into a real project:"
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "week 1-2:",
+     "b": true
+    },
+    {
+     "t": " get initial users, collect feedback"
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "week 3-4:",
+     "b": true
+    },
+    {
+     "t": " fix critical ux issues, improve onboarding"
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "month 2:",
+     "b": true
+    },
+    {
+     "t": " if retention is still <10%, consider a hard pivot"
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "month 3:",
+     "b": true
+    },
+    {
+     "t": " if retention is >20%, you might have something"
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "don't build for years hoping to find pmf. build for months, measure religiously, pivot or persist based on data.",
+     "b": true
+    }
+   ]
+  },
+  {
+   "type": "h2",
+   "segs": [
+    {
+     "t": "closing thoughts (bcs i promised not to be cringe)"
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "what's hard:",
+     "b": true
+    }
+   ]
+  },
+  {
+   "type": "ul",
+   "items": [
+    [
+     {
+      "t": "knowing what to build"
+     }
+    ],
+    [
+     {
+      "t": "knowing what not to build"
+     }
+    ],
+    [
+     {
+      "t": "knowing when to pivot"
+     }
+    ],
+    [
+     {
+      "t": "knowing when to kill it"
+     }
+    ]
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "the questions that matter for hackathon project:",
+     "b": true
+    }
+   ]
+  },
+  {
+   "type": "ol",
+   "items": [
+    [
+     {
+      "t": "does this solve a problem people actually have?"
+     }
+    ],
+    [
+     {
+      "t": "can i ship the core in <2-3 weeks?"
+     }
+    ],
+    [
+     {
+      "t": "is there evidence of demand elsewhere?"
+     }
+    ],
+    [
+     {
+      "t": "what's my unfair advantage?"
+     }
+    ]
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "if you can't answer these, you're not building you're just coding in delulu sry not sry."
+    }
+   ]
+  },
+  {
+   "type": "img",
+   "src": "/writing/ideas-are-cheap/07.png",
+   "width": 736,
+   "height": 736,
+   "caption": "feedback"
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "look, these are just my thoughts. i'm new to this too and i'm definitely not trying to hate on anyone building marketplaces or crowdsourcing platforms or ai wrappers."
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "if you believe in your idea, ship it prove me wrong. i'd love to be wrong."
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "but if you're at your first hackathon, standing in front of a whiteboard, wondering what to build?"
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "skip the delulu idea. study the market. ship the core. get real feedback.",
+     "b": true
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "your first project will probably flop "
+    },
+    {
+     "t": "(do fafo as much as you can",
+     "b": true
+    },
+    {
+     "t": "). mine did. everyone's does."
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "but if you focus on utility over novelty, feedback over features, and iteration over perfection?"
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "you might just build something people actually want to use twice."
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "thanks for reading. lmk if you liked it or cmt if you think i'm full of shit. both are valid."
+    }
+   ]
+  }
+ ]
+}

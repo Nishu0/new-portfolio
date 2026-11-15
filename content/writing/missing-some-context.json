@@ -1,0 +1,1100 @@
+{
+ "slug": "missing-some-context",
+ "title": "your v̶i̶b̶e̶ shit coding sucks bcs you are missing some context",
+ "date": "2025-10-14",
+ "url": "https://x.com/itsnishutwt/status/1978062626014814230",
+ "cover": {
+  "src": "/writing/missing-some-context/cover.jpg",
+  "width": 1250,
+  "height": 500
+ },
+ "excerpt": "the problem nobody's talking about",
+ "minutes": 5,
+ "blocks": [
+  {
+   "type": "img",
+   "src": "/writing/missing-some-context/01.png",
+   "width": 500,
+   "height": 500
+  },
+  {
+   "type": "h3",
+   "segs": [
+    {
+     "t": "the problem nobody's talking about"
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "problem: you're engineering prompts, not context",
+     "b": true
+    }
+   ]
+  },
+  {
+   "type": "img",
+   "src": "/writing/missing-some-context/02.jpg",
+   "width": 1920,
+   "height": 420,
+   "caption": "intro: the problem"
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "everyone's obsessed with crafting the perfect system prompt. \"act as a senior developer with 10 years experience who writes clean code and...\" meanwhile your agent:"
+    }
+   ]
+  },
+  {
+   "type": "ul",
+   "items": [
+    [
+     {
+      "t": "forgets what it did 3 messages ago"
+     }
+    ],
+    [
+     {
+      "t": "reimplements the same function twice"
+     }
+    ],
+    [
+     {
+      "t": "hallucinates file paths that don't exist"
+     }
+    ],
+    [
+     {
+      "t": "costs you ₹4k/month in API bills"
+     }
+    ]
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "you're not failing because you can't \"prompt.\" you're failing because your model's "
+    },
+    {
+     "t": "context window",
+     "b": true
+    },
+    {
+     "t": " is stuffed with stale junk, your "
+    },
+    {
+     "t": "kv cache",
+     "b": true
+    },
+    {
+     "t": " never hits, and your agents are vibing in parallel like they're in different groups."
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "result: premium hallucinations at retail prices.",
+     "b": true
+    }
+   ]
+  },
+  {
+   "type": "img",
+   "src": "/writing/missing-some-context/03.jpg",
+   "width": 1242,
+   "height": 1048,
+   "caption": "context"
+  },
+  {
+   "type": "h3",
+   "segs": [
+    {
+     "t": "the real iceberg (spoiler: it's below the surface)"
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "most devs keep polishing prompts while the real failures sit below:"
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "too little context",
+     "b": true
+    },
+    {
+     "t": " → vague, generic answers that don't solve your actual problem"
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "too much context",
+     "b": true
+    },
+    {
+     "t": " → model gets distracted, focuses on irrelevant details, burns tokens"
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "bad context",
+     "b": true
+    },
+    {
+     "t": " → poisoned against reality, hallucinates confidently"
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "think of it this way: the model is your CPU. the context window is your RAM. you can have the fastest processor in the world, but if your RAM is filled with garbage you're getting blue screens."
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "engineer the RAM, not just the spell."
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "so anyone wondering what the hell i am saying continue…."
+    }
+   ]
+  },
+  {
+   "type": "img",
+   "src": "/writing/missing-some-context/04.jpg",
+   "width": 1190,
+   "height": 986
+  },
+  {
+   "type": "h3",
+   "segs": [
+    {
+     "t": "kv cache: the cheat code you're actively destroying"
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "cheat code: kv cache hits",
+     "b": true
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "as the model reads tokens it computes attention across them and stores keys/values in cache. if earlier tokens remain identical on the next turn the model reuses this cache at ~10% cost instead of full recompute."
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "but here's where devs fuck it up:"
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "you inject \"current time: 12:30:05\" into your system prompt. every single turn. that tiny mutation forces a "
+    },
+    {
+     "t": "complete recompute",
+     "b": true
+    },
+    {
+     "t": " of the entire prefix. your costs snowball. your latency spikes. your margins die."
+    }
+   ]
+  },
+  {
+   "type": "h3",
+   "segs": [
+    {
+     "t": "the math that hits your wallet"
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "let's say you have a 3 turn conversation:"
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "without kv cache hits (because you keep mutating the prefix):",
+     "b": true
+    }
+   ]
+  },
+  {
+   "type": "ul",
+   "items": [
+    [
+     {
+      "t": "Turn 1: 5,000 tokens"
+     }
+    ],
+    [
+     {
+      "t": "Turn 2: 5,000 tokens + 10,000 tokens (full recompute)"
+     }
+    ],
+    [
+     {
+      "t": "Turn 3: 5,000 tokens + 10,000 tokens (full recompute)"
+     }
+    ],
+    [
+     {
+      "t": "Total: ~35,000 tokens",
+      "b": true
+     }
+    ]
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "with kv cache hits (stable prefix):",
+     "b": true
+    }
+   ]
+  },
+  {
+   "type": "ul",
+   "items": [
+    [
+     {
+      "t": "Turn 1: 5,000 tokens"
+     }
+    ],
+    [
+     {
+      "t": "Turn 2: 5,000 new + (0.1 × 5,000 cached) = 5,500 tokens"
+     }
+    ],
+    [
+     {
+      "t": "Turn 3: 5,000 new + (0.1 × 10,000 cached) = 6,000 tokens"
+     }
+    ],
+    [
+     {
+      "t": "Total: ~16,500 tokens",
+      "b": true
+     }
+    ]
+   ]
+  },
+  {
+   "type": "img",
+   "src": "/writing/missing-some-context/05.jpg",
+   "width": 1536,
+   "height": 1024
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "same model. same work. you just chose between "
+    },
+    {
+     "t": "35k tokens vs 16.5k tokens",
+     "b": true
+    },
+    {
+     "t": " only difference is whether you kept the prefix stable."
+    }
+   ]
+  },
+  {
+   "type": "img",
+   "src": "/writing/missing-some-context/06.jpg",
+   "width": 2842,
+   "height": 1546
+  },
+  {
+   "type": "h3",
+   "segs": [
+    {
+     "t": "the rules that keep context clean (and bills sane)"
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "rule 1: append only context: never rewrite the prefix. append new events as trailing messages.",
+     "b": true
+    }
+   ]
+  },
+  {
+   "type": "img",
+   "src": "/writing/missing-some-context/07.jpg",
+   "width": 2868,
+   "height": 506
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "think of your context like a git log you don't rewrite history, you add new commits."
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "bad:",
+     "b": true
+    }
+   ]
+  },
+  {
+   "type": "img",
+   "src": "/writing/missing-some-context/08.jpg",
+   "width": 2544,
+   "height": 1614
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "good:",
+     "b": true
+    }
+   ]
+  },
+  {
+   "type": "img",
+   "src": "/writing/missing-some-context/09.jpg",
+   "width": 2460,
+   "height": 1596
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "rule 2: mask tools, don't juggle them",
+     "b": true
+    }
+   ]
+  },
+  {
+   "type": "img",
+   "src": "/writing/missing-some-context/10.jpg",
+   "width": 1942,
+   "height": 636
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "here's the genius move: keep "
+    },
+    {
+     "t": "full tool definitions",
+     "b": true
+    },
+    {
+     "t": " in context, but constrain generation via logic bias to permit only relevant tools for this step."
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "example: you have 4 tools defined (for ex: brower_navigate, browser_click, shell_execute, database_query). this step only needs browser navigation. instead of removing the shell_execute and database_query tool you keep the all tools definition in context but mask the mask the not required tools for logic processing. so when modal complete a tool call, it can complete with navigate or click."
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "bad approach:",
+     "b": true
+    }
+   ]
+  },
+  {
+   "type": "img",
+   "src": "/writing/missing-some-context/11.jpg",
+   "width": 500,
+   "height": 281
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "good approach:",
+     "b": true
+    }
+   ]
+  },
+  {
+   "type": "img",
+   "src": "/writing/missing-some-context/12.jpg",
+   "width": 500,
+   "height": 281
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "cache remains reusable. model doesn't \"see\" distractions. you just saved 70% of your token costs on tool heavy workflows."
+    }
+   ]
+  },
+  {
+   "type": "h3",
+   "segs": [
+    {
+     "t": "multi agent reality check (sorry, not sorry)"
+    }
+   ]
+  },
+  {
+   "type": "img",
+   "src": "/writing/missing-some-context/13.jpg",
+   "width": 1596,
+   "height": 1056
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "the \"multi agent symphony\" looks sick in your pitch deck. in production? it's parallel chaos."
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "here's what actually happens:"
+    }
+   ]
+  },
+  {
+   "type": "ul",
+   "items": [
+    [
+     {
+      "t": "agent A",
+      "b": true
+     },
+     {
+      "t": " interprets \"build a login system\" as form + validation"
+     }
+    ],
+    [
+     {
+      "t": "agent B",
+      "b": true
+     },
+     {
+      "t": " interprets it as auth service + JWT"
+     }
+    ],
+    [
+     {
+      "t": "agent C",
+      "b": true
+     },
+     {
+      "t": " thinks you wanted OAuth integration"
+     }
+    ],
+    [
+     {
+      "t": "they never talk to each other properly"
+     }
+    ],
+    [
+     {
+      "t": "you get 3 incompatible implementations"
+     }
+    ],
+    [
+     {
+      "t": "you spend 2 days debugging agent handoffs instead of building features"
+     }
+    ]
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "2025 reality check:",
+     "b": true
+    },
+    {
+     "t": " one agent with a single continuous context window, executing subtasks linearly, beats fragile parallel setups 9 times out of 10."
+    }
+   ]
+  },
+  {
+   "type": "img",
+   "src": "/writing/missing-some-context/14.jpg",
+   "width": 2860,
+   "height": 1272
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "when to actually use multiple agents"
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "use micro agents only for:"
+    }
+   ]
+  },
+  {
+   "type": "ul",
+   "items": [
+    [
+     {
+      "t": "throwaway tasks",
+      "b": true
+     },
+     {
+      "t": " that don't need to persist in history"
+     }
+    ],
+    [
+     {
+      "t": "completely isolated domains",
+      "b": true
+     },
+     {
+      "t": " (one agent for frontend, one for backend, never the twain shall meet)"
+     }
+    ],
+    [
+     {
+      "t": "embarrassingly parallel work",
+      "b": true
+     },
+     {
+      "t": " (processing 100 images, each is independent)"
+     }
+    ]
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "if your agents need to \"collaborate,\" you're probably better off with one agent and better context management."
+    }
+   ]
+  },
+  {
+   "type": "img",
+   "src": "/writing/missing-some-context/15.jpg",
+   "width": 2862,
+   "height": 1376
+  },
+  {
+   "type": "h3",
+   "segs": [
+    {
+     "t": "context rot: why your window turns to sludge"
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "add a few semantically similar distractors and performance craters. in repetitive flows agents few shot themselves into drift or hallucination."
+    }
+   ]
+  },
+  {
+   "type": "img",
+   "src": "/writing/missing-some-context/16.jpg",
+   "width": 1532,
+   "height": 1694
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "you must sometime have experience your model performing todo list it's great at first but if your context is full of the similar past action, the model will tend to follow that pattern, even when it's not optimal."
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "real example from production:"
+    }
+   ]
+  },
+  {
+   "type": "ul",
+   "items": [
+    [
+     {
+      "t": "turn 1-5: agent writes clean, modular code"
+     }
+    ],
+    [
+     {
+      "t": "turn 10-15: agent starts repeating patterns from earlier turns"
+     }
+    ],
+    [
+     {
+      "t": "turn 20+: agent is basically copying its own previous responses whether relevant or not"
+     }
+    ]
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "this is "
+    },
+    {
+     "t": "context rot",
+     "b": true
+    },
+    {
+     "t": ". fight it deliberately with:"
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "pattern 1: write (offload)",
+     "b": true
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "store long term summaries, scratchpads, and state outside the window. bring back only what's needed."
+    }
+   ]
+  },
+  {
+   "type": "img",
+   "src": "/writing/missing-some-context/17.jpg",
+   "width": 1024,
+   "height": 1024
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "pattern 2: select (rag)",
+     "b": true
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "fetch only relevant docs/tools via embeddings or similarity fewer shiny distractors -> tighter outputs."
+    }
+   ]
+  },
+  {
+   "type": "img",
+   "src": "/writing/missing-some-context/18.jpg",
+   "width": 1024,
+   "height": 1024
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "pattern 3: compress",
+     "b": true
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "summarize old chat output into \"decision + link + tool used\" instead of raw dumps."
+    }
+   ]
+  },
+  {
+   "type": "img",
+   "src": "/writing/missing-some-context/19.jpg",
+   "width": 1024,
+   "height": 1024
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "pattern 4: isolate",
+     "b": true
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "partition contexts for distinct tasks. sandbox sensitive flows."
+    }
+   ]
+  },
+  {
+   "type": "img",
+   "src": "/writing/missing-some-context/20.jpg",
+   "width": 1024,
+   "height": 1024
+  },
+  {
+   "type": "h3",
+   "segs": [
+    {
+     "t": "the vibe coder's checklist: make each token pay rent"
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "when you're building with any ai agents your context is your codebase. treat it like production code:"
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "be precise, set examples, filter aggressively, watch fullness, automate handoffs:",
+     "b": true
+    }
+   ]
+  },
+  {
+   "type": "ul",
+   "items": [
+    [
+     {
+      "t": "don't mutate prefixes",
+      "b": true
+     },
+     {
+      "t": " → append only keep cache alive"
+     }
+    ],
+    [
+     {
+      "t": "keep all tasks defined",
+      "b": true
+     },
+     {
+      "t": " → mask irrelevant actions via generation constraints"
+     }
+    ],
+    [
+     {
+      "t": "single agent with continuous context",
+      "b": true
+     },
+     {
+      "t": " → parallel only for disposable micro tasks"
+     }
+    ],
+    [
+     {
+      "t": "summarize early",
+      "b": true
+     },
+     {
+      "t": " → before hitting 50% capacity"
+     }
+    ],
+    [
+     {
+      "t": "select via rag",
+      "b": true
+     },
+     {
+      "t": " → fetch only what's relevant right now"
+     }
+    ],
+    [
+     {
+      "t": "isolate sensitive flows",
+      "b": true
+     },
+     {
+      "t": " → separate contexts for separate concerns"
+     }
+    ],
+    [
+     {
+      "t": "watch window fullness",
+      "b": true
+     },
+     {
+      "t": " → quality dips beyond ~50%, dies after 70%"
+     }
+    ],
+    [
+     {
+      "t": "if your kv cache doesn't hit, your margins won't either",
+      "b": true
+     }
+    ]
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "this turns a generic llm into a beginner developer who actually knows your repo."
+    }
+   ]
+  },
+  {
+   "type": "h3",
+   "segs": [
+    {
+     "t": "extra: bonus tips that save big rupees"
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "1. Cache-Aware Token Bill",
+     "b": true
+    }
+   ]
+  },
+  {
+   "type": "img",
+   "src": "/writing/missing-some-context/21.png",
+   "width": 860,
+   "height": 784
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "2. Window Health Score",
+     "b": true
+    }
+   ]
+  },
+  {
+   "type": "img",
+   "src": "/writing/missing-some-context/22.png",
+   "width": 874,
+   "height": 742
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "3. Attention Budget Per Task",
+     "b": true
+    }
+   ]
+  },
+  {
+   "type": "img",
+   "src": "/writing/missing-some-context/23.jpg",
+   "width": 908,
+   "height": 590
+  },
+  {
+   "type": "h3",
+   "segs": [
+    {
+     "t": "non promotional tips"
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "if you want a tool for your next vibe-coding project, check out "
+    },
+    {
+     "t": "https://repoprompt.com/",
+     "b": true,
+     "href": "https://repoprompt.com/"
+    },
+    {
+     "t": ".",
+     "b": true
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "It’s solid for context and prompt engineering."
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "I’m building a smaller version for managing context and plan to launch the mvp by month’s end."
+    }
+   ]
+  },
+  {
+   "type": "p",
+   "segs": [
+    {
+     "t": "thanks for reading this brain rot hope you learned something and save tokens for your next vibe coding project."
+    }
+   ]
+  },
+  {
+   "type": "img",
+   "src": "/writing/missing-some-context/24.png",
+   "width": 498,
+   "height": 312
+  },
+  {
+   "type": "h3",
+   "segs": [
+    {
+     "t": "References"
+    }
+   ]
+  },
+  {
+   "type": "ul",
+   "items": [
+    [
+     {
+      "t": "Context Engineering for AI Agents: Lessons from Building Manus: "
+     },
+     {
+      "t": "https://manus.im/blog/Context-Engineering-for-AI-Agents-Lessons-from-Building-Manus",
+      "href": "https://manus.im/blog/Context-Engineering-for-AI-Agents-Lessons-from-Building-Manus"
+     }
+    ],
+    [
+     {
+      "t": "Context Rot: How Increasing Input Tokens Impacts LLM Performance: "
+     },
+     {
+      "t": "https://research.trychroma.com/context-rot",
+      "href": "https://research.trychroma.com/context-rot"
+     }
+    ],
+    [
+     {
+      "t": "Anthropic - Prompt Engineering Guide: "
+     },
+     {
+      "t": "https://docs.anthropic.com/claude/docs/prompt-engineering",
+      "href": "https://docs.anthropic.com/claude/docs/prompt-engineering"
+     }
+    ],
+    [
+     {
+      "t": "Why Making AI Wrappers Is Harder Than You Think: "
+     },
+     {
+      "t": "https://www.youtube.com/watch?v=SvIJ-BIAPNI",
+      "href": "https://www.youtube.com/watch?v=SvIJ-BIAPNI"
+     }
+    ],
+    [
+     {
+      "t": "OpenAI - Optimizing LLM Applications: "
+     },
+     {
+      "t": "https://platform.openai.com/docs/guides/optimizing-llm-applications",
+      "href": "https://platform.openai.com/docs/guides/optimizing-llm-applications"
+     }
+    ],
+    [
+     {
+      "t": "LangChain - Managing Context Windows: "
+     },
+     {
+      "t": "https://python.langchain.com/docs/modules/memory/\n",
+      "href": "https://python.langchain.com/docs/modules/memory/"
+     }
+    ]
+   ]
+  }
+ ]
+}
