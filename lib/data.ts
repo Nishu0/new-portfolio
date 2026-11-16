@@ -62,12 +62,14 @@ export const experience: Entry[] = [
     period: "2024 - 2025",
     bullets: [
       "Built the initial underwriting system for a credit protocol: ingested borrower data, ran the analysis, and generated zero-knowledge proofs over the result.",
+      "Wrote the underwriting policy engine in Python: lending policies expressed as rules that score each borrower and decide approval, limits, and terms.",
       "Designed and built the proof generation pipeline from scratch, end to end.",
       "Developed the core contracts driving lending pools, credit scoring, and loan lifecycle management.",
+      "Wrote Daml contracts on Canton for the loan workflow, modelling each party's rights and obligations so lenders and borrowers only see the data they are entitled to.",
       "Built backend services in Go and Fastify for large-scale data processing and system orchestration.",
       "Shipped the Next.js dashboards borrowers and lenders used to operate the product.",
     ],
-    tags: ["rust", "move", "fastify", "nextjs", "go"],
+    tags: ["rust", "move", "daml", "canton", "python", "fastify", "nextjs", "go"],
   },
 ];
 
