@@ -50,7 +50,7 @@ export const experience: Entry[] = [
     badge: "Remote",
     logo: "/company/lunacards.png",
     bullets: [
-      "Sole developer on an all-in-one card trading app, owning it end to end: the marketplace, listings, and live Pokémon pack rips, including the randomisation architecture driving pull odds and rip outcomes.",
+      "Only developer on an all-in-one card trading app, owning it end to end: the marketplace, listings, and live Pokémon pack rips, including the randomisation architecture driving pull odds and rip outcomes.",
       "Built a fundamental analysis Telegram bot for end-to-end trading on Polymarket, wiring real-time data feeds, prediction market APIs, and automated execution for event-driven bets.",
       "Analysed trading strategies across historical datasets, surfacing patterns in entry/exit signals, win rates, and risk metrics, and integrated that analysis into the live product.",
     ],
