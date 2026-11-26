@@ -2137,6 +2137,12 @@ a {
     text-overflow: ellipsis;
   }
 
+  /* Rows stack on phones, so indent the details under the title and keep
+     the timeline in its own gutter instead of running through the text. */
+  .timeline .rowRight {
+    padding-left: 66px;
+  }
+
   .readerBar {
     left: 18px;
     right: 18px;
@@ -2173,5 +2179,63 @@ a {
   .bookSheet,
   .bookUnderlay {
     transition: none;
+  }
+}
+
+/* Phones: the four links share the row in equal columns, so all of them
+   are visible without sideways scrolling. */
+@media (max-width: 560px) {
+  .heroLinks {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 6px;
+    overflow: visible;
+  }
+
+  .heroLink {
+    justify-content: center;
+    gap: 6px;
+    padding: 8px 4px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 420px) {
+  /* Too narrow for icon and label together; the labels carry it. */
+  .heroLink svg {
+    display: none;
+  }
+}
+
+/* Small phones: keep the full name and both nav items on one line. */
+@media (max-width: 440px) {
+  .header {
+    gap: 10px;
+  }
+
+  .headerIdentity {
+    gap: 9px;
+  }
+
+  .headerAvatar {
+    width: 30px;
+    height: 30px;
+  }
+
+  .headerName {
+    font-size: 0.9rem;
+  }
+
+  .headerNav {
+    gap: 12px;
+  }
+
+  .headerLink {
+    font-size: 0.86rem;
+  }
+
+  .headerNav .btn {
+    padding: 8px 13px;
+    font-size: 0.82rem;
   }
 }
